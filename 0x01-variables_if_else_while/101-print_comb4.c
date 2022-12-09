@@ -24,7 +24,7 @@ int main(void)
 					putchar(num2);
 					putchar(num3);
 				}
-				if (num1 < num2 && num2 < num3 && num1 < 56)
+				if (num1 < num2 && num2 < num3 && num1 < 55)
 				{
 					putchar(comma);
 					putchar(space);
