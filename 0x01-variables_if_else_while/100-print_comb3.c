@@ -15,13 +15,10 @@ int main(void)
 	{
 		while (num2 <= 57)
 		{
-			if (num1 < num2)
+			if (num1 < num2 && num2 < 58)
 			{
 				putchar(num1);
 				putchar(num2);
-			}
-			if (num1 < 58)
-			{
 				putchar(comma);
 				putchar(space);
 			}
