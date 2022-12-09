@@ -18,13 +18,13 @@ int main(void)
 		{
 			while (num3 <= 57)
 			{
-				if (num1 < num2 < num3)
+				if (num1 < num2 && num2 < num3)
 				{
 					putchar(num1);
 					putchar(num2);
 					putchar(num3);
 				}
-				if (num1 < num2 < num3 && num1 < 56)
+				if (num1 < num2 && num2 < num3 && num1 < 56)
 				{
 					putchar(comma);
 					putchar(space);
