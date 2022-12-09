@@ -1,42 +1,43 @@
 #include <stdio.h>
+
 /**
-*main - Entry point
-*Return: always 0
-*/
+ *main - print a num pair from 00-99 but no repeats (00 01, 00 02, 00 03,...)
+ *Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-	int num1;
-	int num2;
-	int num3;
-	int num4;
-	int comma = 44;
-	int space = 32;
-	int newLine = 10;
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-	for (num1 = 48; num1 <= 57; num1++)
+	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
 	{
-		for (num2 = 48; num2 <= 57; num2++)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			for (num3 = num1; num3 <= 57; num3++)
+		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
 			{
-				for (num4 = num2 + 1; num4 <= 57; num4++)
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar(num1);
-					putchar(num2);
-					putchar(space);
-					putchar(num3);
-					putchar(num4);
+					putchar(tens);
+					putchar(ones);
+					putchar(' ');
+					putchar(t);
+					putchar(o);
 
-					if (!((num1 == 57 && num2 == 56) && (num3 == 57 && num4 == 57)))
+					if (!((tens == '9' && ones == '8') &&
+					      (t == '9' && o == '9')))
 					{
-						putchar(comma);
-						putchar(space);
+						putchar(',');
+						putchar(' ');
 					}
 				}
-				num4 = 48;
+				o = '0';
 			}
 		}
 	}
-	putchar(newLine);
+	putchar('\n');
+
 	return (0);
 }
