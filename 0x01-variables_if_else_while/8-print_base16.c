@@ -6,10 +6,10 @@
 
 int main(void)
 {
-	int hex = 0;
+	int hex = 48;
 	int ahex = 97;
 
-	while (hex <= 9)
+	while (hex <= 57)
 	{
 		putchar(hex);
 		hex++;
