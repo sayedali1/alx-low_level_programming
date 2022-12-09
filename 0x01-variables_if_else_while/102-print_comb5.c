@@ -33,7 +33,6 @@ int main(void)
 						putchar(space);
 					}
 				}
-				num4 = 48;
 			}
 		}
 	}
