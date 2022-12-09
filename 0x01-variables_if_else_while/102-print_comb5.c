@@ -21,7 +21,7 @@ int main(void)
 			{
 				while (num4 <= 57)
 				{
-					if (num1 > num2)
+					if (num1 >= num2)
 					{
 						putchar(num1);
 						putchar(num2);
