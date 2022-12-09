@@ -37,10 +37,13 @@ int main(void)
 					}
 					num4++;
 				}
+				num4 = 49;
 				num3++;
 			}
+			num3 = 48;
 			num2++;
 		}
+		num2 = 48;
 		num1++;
 	}
 	putchar(newLine);
