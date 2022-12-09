@@ -19,7 +19,7 @@ int main(void)
 		{
 			for (num3 = 48; num3 <= 57; num3++)
 			{
-				for (num4 = num3 + 1; num4 <= 57; num4++)
+				for (num4 = num2 + 1; num4 <= 57; num4++)
 				{
 					putchar(num1);
 					putchar(num2);
