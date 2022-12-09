@@ -19,7 +19,7 @@ int main(void)
 	}
 	else
 	{
-		printf("% is negative\n", n)
+		printf("% is negative\n", n);
 	}
 	return (0);
 }
