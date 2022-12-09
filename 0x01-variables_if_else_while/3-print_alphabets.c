@@ -11,14 +11,14 @@ int main(void)
 	while (low_alpha < 123)
 	{
 		putchar(low_alpha);
-		alpha++;
+		low_alpha++;
 	}
 
 	int upper_alpha = 65;
 
 	while (upper_alpha < 91)
 	{
-		putchar(upper_aplha);
+		putchar(upper_alpha);
 		upper_alpha++;
 	}
 	putchar(10);
