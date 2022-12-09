@@ -20,7 +20,7 @@ int main(void)
 				putchar(num1);
 				putchar(num2);
 			}
-			if (num1 < 57)
+			if (num1<num2 && num1 < 57)
 			{
 				putchar(comma);
 				putchar(space);
