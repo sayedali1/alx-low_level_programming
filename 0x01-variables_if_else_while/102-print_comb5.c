@@ -21,7 +21,7 @@ int main(void)
 			{
 				while (num4 <= 57)
 				{
-					if (num1 <= num4)
+					if (num1 <= num3)
 					{
 						putchar(num1);
 						putchar(num2);
@@ -29,7 +29,7 @@ int main(void)
 						putchar(num3);
 						putchar(num4);
 					}
-					if (num1 <= num4 && num1 < 58)
+					if (num1 <= num3 && num1 < 58)
 					{
 						putchar(comma);
 						putchar(space);
