@@ -13,7 +13,7 @@ int main(void)
 		putchar(low_alpha);
 		low_alpha++;
 	}
-
+	
 	int upper_alpha = 65;
 
 	while (upper_alpha < 91)
