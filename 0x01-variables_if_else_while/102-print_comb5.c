@@ -27,7 +27,7 @@ int main(void)
 					putchar(num3);
 					putchar(num4);
 
-					if (!((num1 == 57 && num2 == 56) && (num3 == 57 && num4 == 57)))
+					if (!((num1 == 57 && num2 == 57) && (num3 == 57 && num4 == 57)))
 					{
 						putchar(comma);
 						putchar(space);
