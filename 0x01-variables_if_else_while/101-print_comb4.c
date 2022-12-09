@@ -31,6 +31,7 @@ int main(void)
 				}
 				num3++;
 			}
+			num3 = 48;
 			num2++;
 		}
 		num2 = 48;
