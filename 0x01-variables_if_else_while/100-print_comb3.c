@@ -30,6 +30,6 @@ int main(void)
 		}
 		num1++;
 	}
-	putchart(newLine);
+	putchar(newLine);
 	return (0);
 }
