@@ -6,7 +6,7 @@
 int main(void)
 {
 	int num1 = 48;
-	int num2 = 49;
+	int num2 = 48;
 	int comma = 44;
 	int space = 32;
 	int newLine = 10;
@@ -20,14 +20,14 @@ int main(void)
 				putchar(num1);
 				putchar(num2);
 			}
-
+			if (num1 < 58)
+			{
+				putchar(comma);
+				putchar(space);
+			}
 			num2++;
 		}
-		if (num1 < 58)
-		{
-		putchar(comma);
-		putchar(space);
-		}
+		num2 = 48;
 		num1++;
 	}
 	putchar(newLine);
