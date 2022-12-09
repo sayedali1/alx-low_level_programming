@@ -31,8 +31,8 @@ int main(void)
 					}
 					if (num1 <= num2 && num1 < 58 && num2 < 57)
 					{
-					putchar(comma);
-					putchar(space);
+						putchar(comma);
+						putchar(space);
 					}
 					num4++;
 				}
