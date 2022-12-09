@@ -29,7 +29,6 @@ int main(void)
 						putchar(num3);
 						putchar(num4);
 					}
-
 					if (num1 < 58 && num2 < 57)
 					{
 					putchar(comma);
@@ -37,7 +36,7 @@ int main(void)
 					}
 					num4++;
 				}
-				num4 = 49;
+				num4 = 48;
 				num3++;
 			}
 			num3 = 48;
