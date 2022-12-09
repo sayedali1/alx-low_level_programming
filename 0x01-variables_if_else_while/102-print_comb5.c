@@ -35,7 +35,6 @@ int main(void)
 				}
 				num4 = 49;
 			}
-			num3 = 48;
 		}
 	}
 	putchar(newLine);
