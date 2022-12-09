@@ -33,11 +33,8 @@ int main(void)
 						putchar(space);
 					}
 				}
-				num4 = 48;
 			}
-			num3 = 48;
 		}
-		num2 = 48;
 	}
 	putchar(newLine);
 	return (0);
