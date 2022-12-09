@@ -10,7 +10,7 @@ int main(void)
 
 	while (alpha < 123)
 	{
-		if (alpha == 113 && alpha == 101)
+		if (alpha == 113 || alpha == 101)
 		{
 			break;
 		}
