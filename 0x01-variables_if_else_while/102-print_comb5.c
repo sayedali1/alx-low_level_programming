@@ -5,21 +5,17 @@
 */
 int main(void)
 {
-	int num1;
-	int num2;
-	int num3;
-	int num4;
 	int comma = 44;
 	int space = 32;
 	int newLine = 10;
 
-	for (num1 = 48; num1 <= 57; num1++)
+	for (int num1 = 48; num1 <= 57; num1++)
 	{
-		for (num2 = 48; num2 <= 57; num2++)
+		for (int num2 = 48; num2 <= 57; num2++)
 		{
-			for (num3 = 48; num3 <= 57; num3++)
+			for (int num3 = 48; num3 <= 57; num3++)
 			{
-				for (num4 = num2 + 1; num4 <= 57; num4++)
+				for (int num4 = num2 + 1; num4 <= 57; num4++)
 				{
 					putchar(num1);
 					putchar(num2);
