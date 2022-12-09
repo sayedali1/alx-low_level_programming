@@ -15,8 +15,11 @@ int main(void)
 	{
 		putchar(number);
 		number++;
-		putchar(comma);
-		putchar(space);
+		if (number > 58)
+		{
+			putchar(comma);
+			putchar(space);
+		}
 	}
 	putchar(newLine);
 	return (0);
