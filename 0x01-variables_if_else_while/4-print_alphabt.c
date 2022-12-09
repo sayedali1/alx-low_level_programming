@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (alpha == 113 || alpha == 101)
 		{
-			break;
+			alpha++;
 		}
 
 		putchar(alpha);
