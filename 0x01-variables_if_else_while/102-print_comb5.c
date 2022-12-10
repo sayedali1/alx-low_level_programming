@@ -21,7 +21,7 @@ int main(void)
 			{
 				for (num_4 = 48 ; num_4 <= 57; num_4++)
 				{
-					if(((num_3 + num_4) > (num_1 + num_2) &&  num_3 >=num_1 ) || num_1 < num_3)
+					if(((num_3 + num_4) > (num_1 + num_2) &&  num_3 >= num_1 ) || num_1 < num_3)
 					{
 						putchar(num_1);
 						putchar(num_2);
@@ -32,8 +32,11 @@ int main(void)
 
 					if (!((num_1 == 57 && num_2 == 56) && (num_3 == 57 && num_4 == 57)))
 					{
-						putchar(comma);
-						putchar(space);
+						if(((num_3 + num_4) > (num_1 + num_2) &&  num_3 >= num_1 ) || num_1 < num_3)
+						{
+							putchar(comma);
+							putchar(space);
+						}
 					}
 				}
 			}
