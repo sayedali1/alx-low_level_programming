@@ -5,39 +5,39 @@
 */
 int main(void)
 {
-	int num1;
-	int num2;
-	int num3;
-	int num4;
+	int num_1;
+	int num_2;
+	int num_3;
+	int num_4;
 	int comma = 44;
 	int space = 32;
 	int newLine = 10;
 
-	for (num1 = 48; num1 <= 57; num1++)
+	for (num_1 = 48; num_1 <= 57; num_1++)
 	{
-		for (num2 = 48; num2 <= 57; num2++)
+		for (num_2 = 48; num_2 <= 57; num_2++)
 		{
-			for (num3 = 48; num3 <= 57; num3++)
+			for (num_3 = 48; num_3 <= 57; num_3++)
 			{
-				for (num4 = num1 + 1; num4 <= 57; num4++)
+				for (num_4 = num_1 + 1; num_4 <= 57; num_4++)
 				{
-					putchar(num1);
-					putchar(num2);
+					putchar(num_1);
+					putchar(num_2);
 					putchar(space);
-					putchar(num3);
-					putchar(num4);
+					putchar(num_3);
+					putchar(num_4);
 
-					if (!((num1 == 57 && num2 == 56) && (num3 == 57 && num4 == 57)))
+					if (!((num_1 == 57 && num_2 == 56) && (num_3 == 57 && num_4 == 57)))
 					{
 						putchar(comma);
 						putchar(space);
 					}
 				}
-				num4 = 48;
+				num_4 = 48;
 			}
-			num3 = 48;
+			num_3 = 48;
 		}
-		num2 = 48;
+		num_2 = 48;
 	}
 	putchar(newLine);
 	return (0);
