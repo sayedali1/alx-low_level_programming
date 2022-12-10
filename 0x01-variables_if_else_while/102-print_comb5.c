@@ -20,7 +20,7 @@ int main(void)
 			putchar(space);
 			putchar((num_2 / 10) + '0');
 			putchar((num_2 % 10) + '0');
-			if (num1 == 98 && num2 == 99)
+			if (num_1 == 98 && num_2 == 99)
 				continue;
 
 			putchar(comma);
