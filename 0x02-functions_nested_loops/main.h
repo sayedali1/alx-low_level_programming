@@ -94,4 +94,11 @@ int add(int, int);
 */
 void print_to_98(int n);
 
+/**
+*print_times_table - prints 9 times table
+*@n: sit point
+*Return: void
+*/
+void print_times_table(int n);
+
 #endif
