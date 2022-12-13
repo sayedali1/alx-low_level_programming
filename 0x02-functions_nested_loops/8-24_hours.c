@@ -30,7 +30,7 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar('0' + j);
+				_putchar('00' + j);
 			}
 			_putchar('\n');
 		}
