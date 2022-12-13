@@ -6,3 +6,7 @@
  * On error, -1 is returned, and error is set appropriately.
  */
 int _putchar(char c);
+
+
+
+void print_alphabet(void);
