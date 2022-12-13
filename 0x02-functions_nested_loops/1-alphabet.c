@@ -1,13 +1,15 @@
 #include "main.h"
-/*
-*main - print the alphabet in ascending order
-*Return: always zero
-**/
+
+/**
+*print_alphabet - entry point
+*print the alphabet in ascending order
+*Return: always 0
+*/
 void print_alphabet(void)
 {
-	int alpha = "a";
+	int alpha = a;
 
-	while (alpha <= "z")
+	while (alpha <= z)
 	{
 		_putchar(alpha);
 		alpha++;
