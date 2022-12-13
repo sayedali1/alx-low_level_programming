@@ -19,7 +19,6 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				result = i * j;
-
 				if (j == 0)
 				{
 					printf("%d", result);
@@ -41,7 +40,7 @@ void print_times_table(int n)
 					continue;
 				}
 			}
+			printf("\n");
 		}
-		printf("\n");
 	}
 }
