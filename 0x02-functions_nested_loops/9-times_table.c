@@ -25,12 +25,11 @@ void times_table(void)
 				_putchar('0' + result / 10);
 				_putchar('0' + result % 10);
 			}
-/*			if (j == 9)
-*			{
-*				continue;
-*			}
-*/
-			if (result <= 9)
+			if (j == 9)
+			{
+				break;
+			}
+			else if (result <= 9)
 			{
 				_putchar(',');
 				_putchar(' ');
