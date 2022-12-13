@@ -1,0 +1,12 @@
+#include <unistd.h>
+/**
+*main - Entry point
+*Return: the char _putchat
+*/
+
+int void(void)
+{
+ 
+	_putchat("_"); 
+ 	
+}
