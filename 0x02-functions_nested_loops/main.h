@@ -54,10 +54,10 @@ int print_sign(int n);
 /**
 *_abs - get the absolute value
 *
-*@int: int to return
+*@a: int to return
 *Return: absolute value
 */
-int _abs(int);
+int _abs(int a);
 
 /**
 *print_last_digit - get the last diger of num
