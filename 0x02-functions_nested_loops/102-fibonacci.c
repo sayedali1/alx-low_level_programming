@@ -5,9 +5,9 @@
 */
 int main(void)
 {
-	long long num1 = 1;
-	long long num2 = 2;
-	long long sum = 0;
+	long num1 = 1;
+	long num2 = 2;
+	long sum = 0;
 	int i;
 
 	printf("%d, %d", num1, num2);
