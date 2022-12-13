@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 /**
 *main - prints word putchar using _putchar function
 *Return: always 0
