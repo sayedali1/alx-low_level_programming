@@ -66,4 +66,11 @@ int _abs(int a);
 */
 int print_last_digit(int);
 
+
+/**
+*jack_bauer - print the hours
+*Return: prints each min of the clock
+*/
+void jack_bauer(void);
+
 #endif
