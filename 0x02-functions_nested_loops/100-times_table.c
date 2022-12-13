@@ -12,11 +12,7 @@ void print_times_table(int n)
 	int j;
 	int result = 0;
 
-	if (n > 15 || n < 0)
-	{
-		printf("\n");
-	}
-	else
+	if (!(n > 15 || n < 0))
 	{
 		for (i = 0; i <= n; i++)
 		{
@@ -32,11 +28,11 @@ void print_times_table(int n)
 				{
 					printf(",   %d", result);
 				}
-				else if (result > 99)
+				else if (result <= 99)
 				{
 					printf(",  %d", result);
 				}
-				else if (result > 999)
+				else if (result < 999)
 				{
 					printf(", %d", result);
 				}
@@ -46,6 +42,5 @@ void print_times_table(int n)
 				}
 			}
 			printf("\n");
-		}
 	}
 }
