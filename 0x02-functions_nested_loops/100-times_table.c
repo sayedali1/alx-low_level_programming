@@ -30,15 +30,15 @@ void print_times_table(int n)
 				}
 				else if (result <= 9)
 				{
-					printf("%d,   ", result);
+					printf(",   %d", result);
 				}
 				else if (result > 99)
 				{
-					printf("%d,  ", result);
+					printf(",  %d", result);
 				}
 				else if (result > 999)
 				{
-					printf("%d, ", result);
+					printf(", %d", result);
 				}
 				if (j == 9)
 				{
