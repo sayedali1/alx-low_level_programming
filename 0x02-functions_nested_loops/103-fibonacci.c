@@ -21,6 +21,8 @@ int main(void)
 		{
 			even_sum += sum;
 		}
+		if (even_sum >= 4000000)
+			break;
 	}
 	printf("%ld", even_sum);
 	printf("\n");
