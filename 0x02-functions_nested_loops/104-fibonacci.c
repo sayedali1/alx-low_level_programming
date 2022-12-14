@@ -33,8 +33,8 @@ int main(void)
 
 		printf(", %lu%lu", sum_head, sum_tail);
 
-		a_head = b_head;
-		a_tail = b_tail;
+		num1_head = num2_head;
+		num1_tail = num2_tail;
 		b_head = sum_head;
 		b_tail = sum_tail;
 	}
