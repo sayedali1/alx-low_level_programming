@@ -10,11 +10,11 @@ int main(void)
 	long sum = 0;
 	int i;
 
-	printf("%l, %l", num1, num2);
+	printf("%ld, %ld", num1, num2);
 	for (i = 0; i < 49; i++)
 	{
 		sum = num1 + num2;
-		printf(" ,%l", sum);
+		printf(" ,%ld", sum);
 		num1 = num2;
 		num2 = sum;
 	}
