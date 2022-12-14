@@ -12,7 +12,7 @@ int main(void)
 	long num1_head, num1_tail, num2_head, num2_tail, sum_head, sum_tail;
 
 	printf("%ld, %ld", num1, num2);
-	for (i = 0; i < 93; i++)
+	for (i = 0; i < 92; i++)
 	{
 		sum = num1 + num2;
 		printf(", %lu", sum);
@@ -25,7 +25,7 @@ int main(void)
 	num2_head = num2 / 1000000000;
 	num2_tail = num2 % 1000000000;
 
-	for (; i < 99; i++)
+	for (; i < 98; i++)
 	{
 		overflow = (num1_tail + num2_tail) / 1000000000;
 		sum_tail = (num1_tail + num2_tail) - (1000000000 * overflow);
