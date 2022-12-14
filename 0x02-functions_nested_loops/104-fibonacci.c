@@ -35,8 +35,8 @@ int main(void)
 
 		num1_head = num2_head;
 		num1_tail = num2_tail;
-		b_head = sum_head;
-		b_tail = sum_tail;
+		num2_head = sum_head;
+		num2_tail = sum_tail;
 	}
 	printf("\n");
 	return (0);
