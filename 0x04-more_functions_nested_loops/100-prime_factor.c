@@ -6,8 +6,8 @@
 
 int main(void)
 {
-	long i, prime;
-	long n = 612852475143;
+	long int i, prime;
+	long int n = 612852475143;
 
 	for (i = 2; i < n; i++)
 	{
@@ -19,6 +19,6 @@ int main(void)
 		}
 	}
 
-	printf("%ld\n", prime);
+	printf("%lu\n", prime);
 	return (0);
 }
