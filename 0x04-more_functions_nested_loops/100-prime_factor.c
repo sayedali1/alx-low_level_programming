@@ -6,8 +6,8 @@
 
 int main(void)
 {
-	long int i, prime;
-	long int n = 612852475143;
+	unsigned long  i, prime;
+	unsigned long int n = 612852475143;
 
 	for (i = 2; i < n; i++)
 	{
