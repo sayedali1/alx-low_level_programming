@@ -6,19 +6,18 @@
 
 int main(void)
 {
-	unsigned long  i, prime;
-	unsigned long int n = 612852475143;
+	unsigned long  i;
+	unsigned long  n = 612852475143;
 
 	for (i = 2; i < n; i++)
 	{
 		if (n % i == 0)
 		{
-			prime = i;
 			n = n / i;
 			i = 2;
 		}
 	}
 
-	printf("%lu\n", prime);
+	printf("%lu\n", n);
 	return (0);
 }
