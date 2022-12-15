@@ -8,10 +8,12 @@
 void print_number(int n)
 {
 	unsigned int i, d, pos = n;
-	unsigned int j = 1;
+	double j = 1;
 
 	if (n == 0)
+	{
 		_putchar('0');
+	}
 	else
 	{
 		if (n < 0)
