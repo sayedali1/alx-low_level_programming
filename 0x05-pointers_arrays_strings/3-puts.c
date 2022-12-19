@@ -6,10 +6,10 @@
 */
 void _puts(char *str)
 {
-	while (*s != '\0')
+	while (*str != '\0')
 	{
-		_putchat(*s);
-		s++;
+		_putchat(*str);
+		str++;
 	}
 }
 
