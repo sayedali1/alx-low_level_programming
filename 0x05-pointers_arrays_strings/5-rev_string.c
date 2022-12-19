@@ -1,8 +1,11 @@
 #include "main.h"
 /**
-*rev_string -  function that reverses a string.
-*@s: the first address of the str
-*Return void
+* _strlen - returns the length of a string
+*
+* @s: string
+*
+*Return: length
+*
 */
 int _strlen(char *s)
 {
@@ -16,6 +19,11 @@ int _strlen(char *s)
 	return (len);
 }
 
+/**
+*rev_string -  function that reverses a string.
+*@s: the first address of the str
+*Return: void
+*/
 void rev_string(char *s)
 {
 	char temp;
