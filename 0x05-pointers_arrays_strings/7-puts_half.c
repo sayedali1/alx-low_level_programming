@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 *_strlen - get the len of the string
@@ -39,6 +40,7 @@ void puts_half(char *str)
 	{
 		for (i = (len - 1) / 2; i < len; i++)
 		{
+			printf("%d\n",i);
 			_putchar(str[i]);
 		}
 	}
