@@ -29,7 +29,7 @@ int _strlen(char *s)
 void puts2(char *str)
 {
 	int i = 0;
-	int len = _strlen(s);
+	int len = _strlen(str);
 
 	while (s[i] != '\0' && i < len)
 	{
