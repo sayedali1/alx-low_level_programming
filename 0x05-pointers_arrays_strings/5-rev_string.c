@@ -4,18 +4,26 @@
 *@s: the first address of the str
 *Return void
 */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
 void rev_string(char *s)
 {
 	char temp;
 	int i = 0, j;
 	int len;
 
-	while(*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	j = len;
+	
+	j = _strlen(s) - 1;
 	while(i < j)
 	{
 		temp = s[i];
@@ -23,7 +31,6 @@ void rev_string(char *s)
 		s[j] = temp;
 		j--;
 		i++;	
-
 	}
 }
 
