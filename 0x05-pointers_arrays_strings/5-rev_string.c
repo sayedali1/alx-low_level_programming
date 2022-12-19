@@ -20,9 +20,7 @@ void rev_string(char *s)
 {
 	char temp;
 	int i = 0, j;
-	int len;
 
-	
 	j = _strlen(s) - 1;
 	while(i < j)
 	{
