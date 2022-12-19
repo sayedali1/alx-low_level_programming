@@ -23,6 +23,7 @@ void rev_string(char *s)
 		p = s;
 		p++;
 		s--;
+		_putchar(*p);
 	}
 	for (i = len; i > 0; i-- )
 	{
