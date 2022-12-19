@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
 *print_array - print array in order
 *@a: the start of the array
