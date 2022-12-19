@@ -6,9 +6,13 @@
 */
 int _strlen(char *s)
 {
-	int lenth;
+	int lenth = 0, i = 0;
 
-	lenth = sizeof(s);
+	while (a[i] != '/0')
+	{
+		lenth++;
+		i++;
+	}
 
 	return (lenth);
 }
