@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 /**
 *rev_string -  function that reverses a string.
 *@s: the first address of the str
