@@ -1,15 +1,15 @@
 #include "main.h"
+#include <stdio.h>
 /**
 *rev_string -  function that reverses a string.
 *@s: the first address of the str
 *Return void
 */
-
 void rev_string(char *s)
 {
 	int len = 0;
-	int i;
-	char *p;
+	int char *p;
+	int i=0;
 
 	while(*s != '\0')
 	{
