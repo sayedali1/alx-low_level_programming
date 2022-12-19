@@ -21,7 +21,7 @@ int _strlen(char *s)
 	return (len);
 }
 
-/*
+/**
 *puts2 - prints every other character of a string
 *@str: the address of the first str
 *Return: void
