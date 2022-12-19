@@ -2,7 +2,7 @@
 
 /**
 *swap_int - swap two int
-*@a: first int 
+*@a: first int
 *@b: sec int
 *Return: void
 */
