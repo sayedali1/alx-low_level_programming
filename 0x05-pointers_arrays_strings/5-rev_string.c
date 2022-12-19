@@ -23,8 +23,9 @@ void rev_string(char *s)
 		p = s;
 		p++;
 		s--;
-		_putchar(*p);
+
 	}
+	printf("%s\n",p);
 	for (i = len; i > 0; i-- )
 	{
 		s = p;
