@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
 *_strlen - get the len of the string
 *@s: the string
@@ -26,10 +24,8 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-	
 	int i, len = _strlen(str);
 
-	printf("%d\n", len);
 	if (len % 2 == 0)
 	{
 		for (i = len / 2 ; i < len; i++)
@@ -39,9 +35,8 @@ void puts_half(char *str)
 	}
 	else
 	{
-		for (i = (len - 1) / 2; i < len; i++)
+		for (i = ((len - 1) / 2) - 1; i < len; i++)
 		{
-			printf("%d\n",i);
 			_putchar(str[i]);
 		}
 	}
