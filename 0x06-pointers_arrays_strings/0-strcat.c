@@ -26,16 +26,16 @@ int _strlen(char *s)
  */
 char *_strcat(char *dest, char *src)
 {
-    int i, len = _strlen(dest);
-
-    /*printf ("len =%d", len);*/
+	int i, len = _strlen(dest);
 
     for (i = 0; src[i] != '\0'; i++)
     {
         dest[len + i] = src[i];
+        
     }
 
     dest[len + i] = '\0';
 
-    return (dest);
+	return (dest);
 }
+
