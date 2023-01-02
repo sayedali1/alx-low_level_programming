@@ -1,3 +1,4 @@
+#include "main.h"
 /**
 *_strspn -  function that gets the length of a prefix substring
 *@s: string we look into
@@ -6,18 +7,26 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0;
+	int i, j;
+	unsigned int likly = 0; /*numeber of matched charcters*/
 
-	while (*s != ',')
+	i = 0;
+	while (*(s + i) != '\0')
 	{
-		while (*accept != '\0' && *s != *accept)
+		
+		j = 0; 
+		while (*(accept + j) != '\0')
 		{
-			accept++;
+			if (*(s + i) == *(accept + j))
+			{
+				likly++;
+				break;
+			}
+			if (*(accept + j + 1) == '\0' && *(s + i) != *(accept + j))
+				return (likly);
+			j++;
 		}
-
 		i++;
-		s++;        
 	}
-
-	return (i);    
+	return (likly);    
 }
