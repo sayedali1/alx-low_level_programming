@@ -1,3 +1,5 @@
+#inlcude "main.h"
+#define NULL 0 
 /**
 *_strchr -  function that locates a character in a string.
 *@s: str that we search in
@@ -16,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (&s[i]);
 		}
 	}
-	return (0);
+	return (NULL);
 }
