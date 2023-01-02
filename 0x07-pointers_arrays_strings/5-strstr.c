@@ -20,21 +20,19 @@ char *_strstr(char *haystack, char *needle)
 	{
 		j = 0;
 		x = i;
-		if (*(haystack + i) == *needle)
+		while (*(needle + j) != '\0')
 		{
-			while (*(needle + j) != '\0')
+			if (*(haystack + x) == *(needle + j))
 			{
-				if (*(haystack + x) == *(needle + j))
-				{
-					x++;
-					j++;
-				}
-				else
-				{
-					break;
-				}
+				x++;
+				j++;
+			}
+			else
+			{
+				break;
 			}
 		}
+		
 		if (*(needle + j) == '\0')
 		{
 			return (haystack + i);
