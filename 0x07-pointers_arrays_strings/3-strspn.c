@@ -13,8 +13,8 @@ unsigned int _strspn(char *s, char *accept)
 	i = 0;
 	while (*(s + i) != '\0')
 	{
-		
-		j = 0; 
+
+		j = 0;
 		while (*(accept + j) != '\0')
 		{
 			if (*(s + i) == *(accept + j))
@@ -28,5 +28,5 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		i++;
 	}
-	return (likly);    
+	return (likly);
 }
