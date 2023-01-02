@@ -1,4 +1,4 @@
-#define NULL 0 
+
 
 /**
 *_strchr -  function that locates a character in a string.
@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 	if (s[i] == c)
 		return (&s[i]);
 	else
-		return (NULL);
+		return (0);
 }
