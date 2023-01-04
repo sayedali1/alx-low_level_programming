@@ -32,7 +32,7 @@ int check_pali(char *s, int len, int i)
 	{
 		if (*(s + i) == *(s + (len - i - 1)))
 		{
-			return(check_pali(s, len, i + 1));
+			return (check_pali(s, len, i + 1));
 		}
 		else
 		{
@@ -53,6 +53,7 @@ int check_pali(char *s, int len, int i)
 int is_palindrome(char *s)
 {
 	int len_pali = _strlen_recursion(s);
+
 	if (s == '\0')
 	{
 		return (1);
