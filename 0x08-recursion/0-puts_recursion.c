@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*_putd_recursion - fun that print a str
+*_puts_recursion - fun that print a str
 *@s: pointer to a string that we want to print
 *Retutn: void
 */
@@ -16,3 +16,4 @@ void _puts_recursion(char *s)
 		_puts_recursion(s + 1);
 	}
 }
+
