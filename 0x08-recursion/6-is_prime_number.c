@@ -24,7 +24,7 @@ int check_prime(int n, int i)
 	}
 
 }
-/*
+/**
 *is_prime_number - fun that we know if num is prime or not
 *@n: num we check
 *Return: 1 if prime, 0 otherwise
