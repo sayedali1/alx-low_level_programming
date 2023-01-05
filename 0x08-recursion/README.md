@@ -16,7 +16,7 @@
 
 * You are not allowed to use the `standard library`. Any use of functions like `printf`, `puts`, etc… is forbidden
 
-* You are allowed to use [_putchar](_putchar.c)
+* You are allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
 
 * You don’t have to push `_putchar.c`, we will use our file. If you do it won’t be taken into account
 
