@@ -5,7 +5,7 @@
 *@s1: frist str
 *@s2: sec str
 *@holder: pointer to hold the str to use when we want to
-*check the char before 
+*check the char before
 *Return: 1 if same, 0 otherwise
 */
 
