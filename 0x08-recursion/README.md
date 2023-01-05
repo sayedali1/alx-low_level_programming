@@ -1,4 +1,4 @@
-# Recursion
+# 0x08-Recursion
 
 ## Requirements
 
@@ -28,6 +28,10 @@
 * **You are not allowed to use any kind of loops**
 * You are not allowed to use `static` variables
 
+## what we should leard from these tasks
+
+* how to use recursion
+
 ## Tasks
 
 | Tasks | Description |
@@ -41,3 +45,7 @@
 | [6](/0x08-recursion/6-is_prime_number.c) | Write a function that returns `1` if the input integer is a prime number, otherwise return `0` |
 | [7](/0x08-recursion/100-is_palindrome.c) | Write a function that returns `1` if a string is a palindrome and `0` if not.<ul><li>An empty string is a palindrome |
 | [8](/0x08-recursion/101-wildcmp.c) | Write a function that compares two strings and returns `1` if the strings can be considered identical, otherwise return `0`.<ul><li>`s2` can contain the special character `*`<li>The special char `*` can replace any string (including an empty string)|
+
+## Author
+
+* [sayed ali](https://github.com/sayedali1)
