@@ -28,10 +28,13 @@ int _strlen_recursion(char *s)
 */
 int check_pali(char *s, int len, int i)
 {
+	/*split the str */
 	if (i < len / 2)
 	{
+		/*check the first char when the list char and so on*/
 		if (*(s + i) == *(s + (len - i - 1)))
 		{
+			/*go to the next char using recursion*/
 			return (check_pali(s, len, i + 1));
 		}
 		else
@@ -52,9 +55,10 @@ int check_pali(char *s, int len, int i)
 */
 int is_palindrome(char *s)
 {
+	/*get the len of the str*/
 	int len_pali = _strlen_recursion(s);
 
-	if (*s == '\0')
+	if (*s == '\0')	/*when sr is empty*/
 	{
 		return (1);
 	}
