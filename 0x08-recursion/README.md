@@ -25,6 +25,8 @@
 * The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called `main.h`
 
 * Don’t forget to push your header file
+* **You are not allowed to use any kind of loops**
+* You are not allowed to use `static` variables
 
 ## Tasks
 
