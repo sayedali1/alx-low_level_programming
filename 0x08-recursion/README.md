@@ -2,7 +2,7 @@
 
 | Tasks | Description |
 | ---| --- |
-| [0](https://github.com/sayedali1/alx-low_level_programming/blob/master/0x08-recursion/0-puts_recursion.c) | Write a function that prints a string, followed by a new line. |
+| [0](0x08-recursion/0-puts_recursion.c) | Write a function that prints a string, followed by a new line. |
 | 1 | Write a function that prints a string in reverse. |
 | 2 | Write a function that returns the length of a string. |
 | 3 | Write a function that returns the factorial of a given number. |
