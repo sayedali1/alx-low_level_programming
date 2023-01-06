@@ -33,11 +33,10 @@
 * How to use `__attribute__((unused))` or `(void)` to compile functions with unused variables or parameters
 
 ## Tasks
-
-<details><summary>task0</summary>
+| Tasks | Description |
+| --- | --- |
+| 0 |<details><summary>Write a program that prints its name, followed by a new line.</summary>
 <p>
-
-Write a program that prints its name, followed by a new line.
 
 * If you rename the program, it will print the new name, without having to compile it again
 * You should not remove the path before the name of the program
@@ -53,7 +52,7 @@ julien@ubuntu:~/0x0A. argc, argv$
 ```
 
 </p>
-</details>
+</details> |
 
 <details><summary>task1</summary>
 <p>
