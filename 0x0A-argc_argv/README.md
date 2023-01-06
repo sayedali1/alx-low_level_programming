@@ -35,8 +35,7 @@
 ## Tasks
 | Tasks | Description |
 | --- | --- |
-| 0 | <details><summary>Write a program that prints its name, followed by a new line.</summary><p>
-<ul><li>If you rename the program, it will print the new name, without having to compile it again<li>You should not remove the path before the name of the program |
+| 0 | <details><summary>Write a program that prints its name, followed by a new line.</summary><ul><li>If you rename the program, it will print the new name, without having to compile it again<li>You should not remove the path before the name of the program |
 
 <details><summary>task1</summary>
 <p>
