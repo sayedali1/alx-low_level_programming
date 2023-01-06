@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	printf("%s\n", argv[0]);
+	
 
 	if (argc > 1)
 	{
