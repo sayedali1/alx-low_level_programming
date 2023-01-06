@@ -57,13 +57,13 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
-```char *_strstr(char *haystack, char *needle);
-
+char *_strstr(char *haystack, char *needle);
+```
 
 If you haven’t coded all of the above functions create empty ones with the right prototype.
 Don’t forget to push your `main.h` file to your repository. It should at least contain all the prototypes of the above functions.
 
-```julien@ubuntu:~/0x09. Static Librairies$ ar -t libmy.a 
+```julien@ubuntu:~/0x09. Static Librairies$ ar -t libmy.a
 0-isupper.o
 0-memset.o
 0-strcat.o
@@ -159,8 +159,8 @@ julien@ubuntu:~/0x09. Static Librairies$ gcc -std=gnu89 main.c -L. -lmy -o quote
 julien@ubuntu:~/0x09. Static Librairies$ ./quote 
 "At the end of the day, my goal was to be the best hacker"
     - Kevin Mitnick
-```julien@ubuntu:~/0x09. Static Librairies$
-
+julien@ubuntu:~/0x09. Static Librairies$
+```
 
 </p>
 </details>
