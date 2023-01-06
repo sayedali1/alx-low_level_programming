@@ -202,3 +202,7 @@ julien@ubuntu:~/0x09. Static Librairies$
 ```
 </p>
 </details>
+
+## Author
+
+* [sayed ali](https://github.com/sayedali1)
