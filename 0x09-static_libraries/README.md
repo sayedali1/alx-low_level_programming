@@ -33,7 +33,7 @@
 
 ## Task
 
-### <details><summary>task0</summary>
+<details><summary>task0</summary>
 <p>
 
 Create the static library `libmy.a` containing all the functions listed below:
@@ -159,9 +159,11 @@ julien@ubuntu:~/0x09. Static Librairies$ gcc -std=gnu89 main.c -L. -lmy -o quote
 julien@ubuntu:~/0x09. Static Librairies$ ./quote 
 "At the end of the day, my goal was to be the best hacker"
     - Kevin Mitnick
-```julien@ubuntu:~/0x09. Static Librairies$
+julien@ubuntu:~/0x09. Static Librairies$
+
 </p>
 </details>
+
 
 <details><summary>task1</summary>
 <p>
