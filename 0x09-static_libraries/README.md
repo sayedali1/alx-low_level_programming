@@ -36,7 +36,7 @@
 <details><summary>task0</summary>
 <p>
 
-Create the static library `libmy.a` containing all the functions listed below:
+Create the static library [`libmy.a`](/0x09-static_libraries/libmy.a) containing all the functions listed below:
 
 ```int _putchar(char c);
 int _islower(int c);
@@ -168,7 +168,7 @@ julien@ubuntu:~/0x09. Static Librairies$
 <details><summary>task1</summary>
 <p>
 
-Create a script called `create_static_lib.sh` that creates a static library called `liball.a` from all the `.c` files that are in the current directory.
+Create a script called [`create_static_lib.sh`](/0x09-static_libraries/create_static_lib.sh) that creates a static library called `liball.a` from all the `.c` files that are in the current directory.
 
 ```
 julien@ubuntu:~/0x09. Static Librairies$ ls *.c
