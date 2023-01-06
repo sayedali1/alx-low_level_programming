@@ -2,10 +2,10 @@
 #include <stdlib.h>
 /**
 *is_symbol - check if the str has sym or not
-*@s: pointer to the str 
+*@s: pointer to the str
 *Return: 1 if symbol, 0 otherwise
 */
-int is_symbol (char *s)
+int is_symbol(char *s)
 {
 	int i;
 	/*loop throw the string*/
