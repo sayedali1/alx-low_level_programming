@@ -33,7 +33,7 @@
 
 ## Task
 
-<details><summary>task0</summary>
+### <details><summary>task0</summary>
 <p>
 
 Create the static library `libmy.a` containing all the functions listed below:
@@ -160,12 +160,10 @@ julien@ubuntu:~/0x09. Static Librairies$ ./quote
 "At the end of the day, my goal was to be the best hacker"
     - Kevin Mitnick
 ```julien@ubuntu:~/0x09. Static Librairies$
-
-
 </p>
 </details>
 
-### <details><summary>task1</summary>
+<details><summary>task1</summary>
 <p>
 
 Create a script called `create_static_lib.sh` that creates a static library called `liball.a` from all the `.c` files that are in the current directory.
