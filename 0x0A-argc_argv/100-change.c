@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int cents[5] = {25, 10, 5, 2, 1};
-	int money, i, count = 0;
+	int money, i, coins = 0;
 
 	if (argc == 1)
 	{
@@ -18,23 +18,26 @@ int main(int argc, char *argv[])
 	}
 
 	money = atoi(argv[1]);
-
+	/*check if input is positive*/
 	if (money > 0)
 	{
 		i = 0;
+		/*when money = 0 quite the loop*/
 		while (money)
 		{
+			/*check before whe sub from the money*/
 			if ((money - cents[i]) >= 0)
 			{
 				money -= cents[i];
-				count++;
+				coins++;
 			}
 			else
 			{
+				/*go to the next element in cents*/
 				i++;
 			}
 		}
-		printf("%d\n", count);
+		printf("%d\n", coins);
 	}
 	else
 	{
