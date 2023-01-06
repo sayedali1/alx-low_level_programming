@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 	if (money > 0)
 	{
 		i = 0;
-		
 		while (money)
 		{
 			if ((money - cents[i]) >= 0)
