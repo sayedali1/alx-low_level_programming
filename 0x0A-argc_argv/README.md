@@ -45,7 +45,7 @@ julien@ubuntu:~/0x0A. argc, argv$ ./mynewnameis
 ./mynewnameis
 julien@ubuntu:~/0x0A. argc, argv$
 ```
-|
+
 
 <details><summary>task1</summary>
 <p>
