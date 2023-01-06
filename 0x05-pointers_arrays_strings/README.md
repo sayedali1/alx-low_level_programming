@@ -45,9 +45,7 @@
 | [5](/0x05-pointers_arrays_strings/5-rev_string.c) | Write a function that reverses a string. |
 | [6](/0x05-pointers_arrays_strings/6-puts2.c) | Write a function that prints every other character of a string, starting with the first character, followed by a new line. |
 | [7](/0x05-pointers_arrays_strings/7-puts_half.c) | Write a function that prints half of a string, followed by a new line. |
-| [8](/0x05-pointers_arrays_strings/8-print_array.c) | Write a function that prints `n` elements of an array of integers, followed by a new line.<ul><li>where n is the number of elements of the array to be printed
-<li>Numbers must be separated by comma, followed by a space<li>The numbers should be displayed in the sameorder as they are stored in the array |
-
+| [8](/0x05-pointers_arrays_strings/8-print_array.c) | Write a function that prints `n` elements of an array of integers, followed by a new line.<ul><li>where n is the number of elements of the array to be printed<li>Numbers must be separated by comma, followed by a space<li>The numbers should be displayed in the sameorder as they are stored in the array |
 | [9](/0x05-pointers_arrays_strings/9-strcpy.c) | Write a function that copies the string pointed to by `src`,including the terminating null byte `(\0)`, to the buffer pointed to by `dest`. |
 
 ## Author
