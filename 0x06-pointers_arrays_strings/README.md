@@ -35,7 +35,8 @@
 * Scope of variables
 
 ## Tasks
-
+| task | Descriptions |
+| --- | ---|
 | [0](/0x06-pointers_arrays_strings/0-strcat.c) | Write a function that concatenates two strings.<ul><li>This function appends the `src` string to the dest string, overwriting the terminating null byte `(\0)` at the end of `dest`, and then adds a terminating null byte<li>Returns a pointer to the resulting string dest |
 | [1](/0x06-pointers_arrays_strings/1-strncat.c) | Write a function that concatenates two strings. |
 | [2](/0x06-pointers_arrays_strings/2-strncpy.c) | Write a function that copies a string |
