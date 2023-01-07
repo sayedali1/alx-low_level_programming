@@ -41,7 +41,7 @@ julien@ubuntu:~/0x0A. argc, argv$ ./mynameis
 julien@ubuntu:~/0x0A. argc, argv$ mv mynameis mynewnameis
 julien@ubuntu:~/0x0A. argc, argv$ ./mynewnameis 
 ./mynewnameis
-julien@ubuntu:~/0x0A. argc, argv$  </details> |
+julien@ubuntu:~/0x0A. argc, argv$</pre>  </details> |
 
 <details><summary>task1</summary>
 <p>
