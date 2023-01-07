@@ -44,6 +44,7 @@
 | [5](/0x0A-argc_argv/100-change.c) | <details><summary>Write a program that prints the minimum number of coins to make change for an amount of money.</summary><ul><li>`Usage: ./change cents`<li>where `cents` is the amount of cents you need to give back<li>if the number of arguments passed to your program is not exactly `1`, print Error, followed by a new line, and return `1`<li>you should use `atoi` to parse the parameter passed to your program<li>If the number passed as the argument is negative, print `0`, followed by a new line<li>You can use an unlimited number of coins of values 25, `10`, `5`, `2`, and `1` cent |
 
 ## <details><summary>example</summary>
+<p>
 
 <details><summary>task0</summary>
 <p>
@@ -61,7 +62,9 @@ julien@ubuntu:~/0x0A. argc, argv$
 </p>
 </details>
 
+</p>
 </details>
+
 ## Author
 
 * [sayed ali](https://github.com/sayedali1)
