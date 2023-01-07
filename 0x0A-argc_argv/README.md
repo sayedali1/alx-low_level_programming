@@ -45,7 +45,7 @@
 
 ## <details><summary>example</summary>
 
-* <details><summary>task0</summary>
+<details><summary>task0</summary>
 <p>
 
 ```
@@ -57,6 +57,7 @@ julien@ubuntu:~/0x0A. argc, argv$ ./mynewnameis
 ./mynewnameis
 julien@ubuntu:~/0x0A. argc, argv$ 
 ```
+
 </p>
 </details>
 
