@@ -43,27 +43,6 @@
 | [4](/0x0A-argc_argv/4-add.c) | <details><summary>Write a program that adds positive numbers.</summary><ul><li>Print the result, followed by a new line<li>If no number is passed to the program, print 0, followed by a new line<li>If one of the number contains symbols that are not digits, print `Error`, followed by a new line, and return `1`<li>You can assume that numbers and the addition of all the numbers can be stored in an `int` |
 | [5](/0x0A-argc_argv/100-change.c) | <details><summary>Write a program that prints the minimum number of coins to make change for an amount of money.</summary><ul><li>`Usage: ./change cents`<li>where `cents` is the amount of cents you need to give back<li>if the number of arguments passed to your program is not exactly `1`, print Error, followed by a new line, and return `1`<li>you should use `atoi` to parse the parameter passed to your program<li>If the number passed as the argument is negative, print `0`, followed by a new line<li>You can use an unlimited number of coins of values 25, `10`, `5`, `2`, and `1` cent |
 
-<details><summary>EXAMPLES</summary>
-
-<p>
-
-<details><summary>task0</summary>
-
-```
-julien@ubuntu:~/0x0A. argc, argv$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-whatsmyname.c -o mynameis
-julien@ubuntu:~/0x0A. argc, argv$ ./mynameis
-./mynameis
-julien@ubuntu:~/0x0A. argc, argv$ mv mynameis mynewnameis
-julien@ubuntu:~/0x0A. argc, argv$ ./mynewnameis 
-./mynewnameis
-julien@ubuntu:~/0x0A. argc, argv$ 
-```
-
-</details>
-
-</p>
-</details>
-
 ## Author
 
 * [sayed ali](https://github.com/sayedali1)
