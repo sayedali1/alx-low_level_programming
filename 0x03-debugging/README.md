@@ -388,3 +388,7 @@ Fix the [`print_remaining_days()`](/0x03-debugging/3-print_remaining_days.c) fun
 
 </p>
 </details>
+
+## Author
+
+* [sayed ali](https://github.com/sayedali1)
