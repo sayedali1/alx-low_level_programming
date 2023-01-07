@@ -220,7 +220,7 @@ Fix the code in [`2-largest_number.c`](/0x03-debugging/2-largest_number.c) so th
 </p>
 </details>
 
-<details><summary>task2</summary>
+<details><summary>task3</summary>
 <p>
 
 This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
