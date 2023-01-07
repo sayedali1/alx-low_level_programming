@@ -60,6 +60,7 @@ julien@ubuntu:~/0x0A. argc, argv$
 </p>
 </details>
 
+</details>
 ## Author
 
 * [sayed ali](https://github.com/sayedali1)
