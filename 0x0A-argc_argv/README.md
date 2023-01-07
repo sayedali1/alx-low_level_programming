@@ -35,30 +35,9 @@
 ## Tasks
 | Tasks | Description |
 | --- | --- |
-| 0 |  <details><summary>Write a program that prints its name, followed by a new line.</summary><ul><li>If yourename the program, it will print the new name, without having to compile it again<li>You should not remove the path before the name of the program <pre>julien@ubuntu:\~/0x0A. argc, argv$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-whatsmyname.c -o mynameis<br>julien@ubuntu:~/0x0A. argc, argv$ ./mynameis<br>./mynameis<br>julien@ubuntu:\~/0x0A. argc, argv$ mv mynameis mynewnameis<br>julien@ubuntu:\~/0x0A. argc, argv$ ./mynewnameis<br>./mynewnameis<br>julien@ubuntu:\~/0x0A. argc, argv$ </details> |
+| 0 |  <details><summary>Write a program that prints its name, followed by a new line.</summary><ul><li>If yourename the program, it will print the new name, without having to compile it again<li>You should not remove the path before the name of the program |
 
-<details><summary>task1</summary>
-<p>
-
-Write a program that prints the number of arguments passed into it.
-
-* Your program should print a number, followed by a new line
-
-```
-julien@ubuntu:~/0x0A. argc, argv$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-args.c -o nargs
-julien@ubuntu:~/0x0A. argc, argv$ ./nargs 
-0
-julien@ubuntu:~/0x0A. argc, argv$ ./nargs hello
-1
-julien@ubuntu:~/0x0A. argc, argv$ ./nargs "hello, world"
-1
-julien@ubuntu:~/0x0A. argc, argv$ ./nargs hello, world
-2
-julien@ubuntu:~/0x0A. argc, argv$ 
-```
-
-</p>
-</details>
+| 1 | <details><summary>Write a program that prints the number of arguments passed into it.</summary><ul><li>Your program should print a number, followed by a new line |
 
 <details><summary>task2</summary>
 <p>
