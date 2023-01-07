@@ -45,4 +45,7 @@
 
 | Tasks | Description |
 | -- | -- |
-| [0](/0x02-functions_nested_loops/0-putchar.c) | Write a program that prints _putchar, followed by a new line<ul><li>The program should return 0 |
+| [0](/0x02-functions_nested_loops/0-putchar.c) | Write a program that prints _putchar, followed by a new line<ul><li>The program should return `0` |
+| [1](/0x02-functions_nested_loops/1-alphabet.c) | Write a function that prints the alphabet, in lowercase, followed by a new line.<ul><li>You can only use `_putchar` twice in your code |
+| [2](/0x02-functions_nested_loops/2-print_alphabet_x10.c) | Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.<ul><li>You can only use `_putchar` twice in your code |
+| [3](/0x02-functions_nested_loops/3-islower.c) | Write a function that checks for lower case character<ul><li>Returns 1 if c is lowercase<li>Returns 0 otherwise |
