@@ -33,6 +33,7 @@
 * How to use `__attribute__((unused))` or `(void)` to compile functions with unused variables or parameters
 
 ## Tasks
+
 | Tasks | Description |
 | --- | --- |
 | [0](/0x0A-argc_argv/0-whatsmyname.c) |  <details><summary>Write a program that prints its name, followed by a new line.</summary><ul><li>If yourename the program, it will print the new name, without having to compile it again<li>You should not remove the path before the name of the program |
