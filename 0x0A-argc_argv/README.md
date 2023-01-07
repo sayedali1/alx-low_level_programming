@@ -36,7 +36,6 @@
 | Tasks | Description |
 | --- | --- |
 | 0 |  <details><summary>Write a program that prints its name, followed by a new line.</summary><ul><li>If yourename the program, it will print the new name, without having to compile it again<li>You should not remove the path before the name of the program |
-
 | 1 | <details><summary>Write a program that prints the number of arguments passed into it.</summary><ul><li>Your program should print a number, followed by a new line |
 
 <details><summary>task2</summary>
