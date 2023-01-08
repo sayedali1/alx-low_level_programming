@@ -65,7 +65,7 @@
 
 ## Examples
 
-<details><summary>emaple 9</summary>
+### <details><summary>emaple 9</summary>
 
 ```
 julien@ubuntu:~/0x02$ cat 9-main.c
