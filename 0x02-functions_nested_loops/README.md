@@ -54,7 +54,7 @@
 | [6](/0x02-functions_nested_loops/6-abs.c) | Write a function that computes the absolute value of an integer. |
 | [7](/0x02-functions_nested_loops/7-print_last_digit.c) | Write a function that prints the last digit of a number. |
 | [8](/0x02-functions_nested_loops/8-24_hours.c) | Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59. |
-| [9](/0x02-functions_nested_loops/9-times_table.c) | Write a function that prints the `9` times table, starting with `0`. [see example 9](https://github.com/sayedali1/alx-low_level_programming/tree/master/0x02-functions_nested_loops#exmaple-9) |
+| [9](/0x02-functions_nested_loops/9-times_table.c) | Write a function that prints the `9` times table, starting with `0`. [see example 9](https://github.com/sayedali1/alx-low_level_programming/tree/master/0x02-functions_nested_loops#example-9) |
 | [10](/0x02-functions_nested_loops/10-add.c) | Write a function that adds two integers and returns the result. |
 | [11](/0x02-functions_nested_loops/11-print_to_98.c) | Write a function that prints all natural numbers from `n` to `98`, followed by a new line<ul><li>Numbers must be separated by a comma, followed by a space<li>Numbers should be printed in order<li>The first printed number should be the number passed to your function<li>The last printed number should be `98`<li>You are allowed to use the standard library |
 | [12](/0x02-functions_nested_loops/100-times_table.c) | Write a function that prints the n times table, starting with 0.<ul><li>If `n` is greater than `15` or less than `0` the function should not print anything [see example 12](https://github.com/sayedali1/alx-low_level_programming/tree/master/0x02-functions_nested_loops#example-12) |
