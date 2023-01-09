@@ -54,7 +54,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 == NULL)
 	{
-		len2 = "";
+		s2 = "";
 	}
 	/* get the lenth of s1 and s2 */
 	len1 = _strlen(s1);
