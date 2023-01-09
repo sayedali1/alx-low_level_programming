@@ -48,27 +48,17 @@ char *str_concat(char *s1, char *s2)
 	int len1, len2;
 	char *str;	/* str we concat strings in */
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL)
 	{
-		len1 = 0;
-		len2 = 0;
+		s1 ="";
 	}
-	else if (s1 == NULL)
+	if (s2 == NULL)
 	{
-		len1 = 0;
-		len2 = _strlen(s2);
+		len2 = "";
 	}
-	else if (s2 == NULL)
-	{
-		len1 = _strlen(s1);
-		len2 = 0;
-	}
-	else
-	{
 	/* get the lenth of s1 and s2 */
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	}
 
 	/* create array size of s1 and s2 */
 	str = malloc((sizeof(char) * (len1 + len2)) + 1);
