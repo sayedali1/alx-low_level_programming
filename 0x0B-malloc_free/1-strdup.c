@@ -45,9 +45,9 @@ char *_strcpy(char *dest, char *src)
 
 char *_strdup(char *str)
 {
-	int len ;
+	int len;
 	char *cpstr;
-	
+
 	if (str == NULL)
 	{
 		return (NULL);
