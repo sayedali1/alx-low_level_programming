@@ -52,7 +52,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	len = _strlen(str)
+	len = _strlen(str);
 	/* create array of str size of str */
 	cpstr = (char *)malloc((sizeof(char) * len) + 1);
 
