@@ -38,22 +38,22 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
-*_strdub - fun that cp a str into another
+*_strdup - fun that cp a str into another
 *@str: pointer to str we want to duplicate
 *Return: pointer to the copied array
 */
 
 char *_strdup(char *str)
 {
-	int len = _strlen(str);
+	int len ;
 	char *cpstr;
-
-	if (len == 0)
+	
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-
-	/* create array of str size of str */    
+	len = _strlen(str)
+	/* create array of str size of str */
 	cpstr = (char *)malloc((sizeof(char) * len) + 1);
 
 	if (cpstr == NULL)
