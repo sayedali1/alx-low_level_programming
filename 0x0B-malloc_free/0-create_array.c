@@ -10,17 +10,19 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
+	/* create dynamic memory of size size */
 	char *array = (char *)malloc(sizeof(char) * size);
-
+	/* check if no error in memory alloc */
 	if (array == NULL)
 	{
 		return (NULL);
 	}
+	/* check the size not empty */
 	if (size == 0)
 	{
 		return (NULL);
 	}
-
+	/* wake through the array */
 	for (i = 0; i < size; i++)
 	{
 		*(array + i) = c;
