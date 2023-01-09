@@ -26,10 +26,11 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		array_2d[i] = malloc(sizeof(int) * width);
+		array_2d[i] = malloc(sizeof(int) * width);/* allocate memory for colm */
 
 		if (array_2d[i] == NULL)
 		{
+			/* if mallac return null free all the elements */
 			for (i = 0; i < width; i++)
 			{
 				free(array_2d[i]);
@@ -38,6 +39,7 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
+	/* inti all the array with zero */
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
