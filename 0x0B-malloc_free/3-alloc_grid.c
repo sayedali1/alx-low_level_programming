@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	array_2d = malloc(sizeof(int) * height);/* allocate memory to rows */
+	array_2d = malloc(sizeof(int *) * height);/* allocate memory to rows */
 	if (array_2d == NULL)
 	{
 		free(array_2d);
@@ -27,7 +27,7 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		array_2d[i] = malloc(sizeof(int *) * width);
+		array_2d[i] = malloc(sizeof(int ) * width);
 
 		if (array_2d[i] == NULL)
 		{
