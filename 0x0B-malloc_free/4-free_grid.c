@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib>
+#include <stdlib.h>
 /**
 *free_grid - fun to free 2d memory alloc
 *@grid: is a 2d array we to free 
