@@ -46,13 +46,15 @@ char *_strcpy(char *dest, char *src)
 char *_strdup(char *str)
 {
 	int len = _strlen(str);
+	char *cpstr;
+
 	if (len == 0)
 	{
 		return (NULL);
 	}
 
 	/* create array of str size of str */    
-	char *cpstr = (char *)malloc((sizeof(char) * len) + 1);
+	cpstr = (char *)malloc((sizeof(char) * len) + 1);
 
 	if (cpstr == NULL)
 	{
