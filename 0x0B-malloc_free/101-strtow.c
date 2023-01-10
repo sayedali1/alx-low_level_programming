@@ -80,7 +80,7 @@ char **strtow(char *str)
 			/* printf("%d %d\n", len, i); */
 			strs[j] = malloc(sizeof(char) * (len + 1));
 
-			if (strs[k] == NULL)
+			if (strs[j] == NULL)
 			{
 				/* printf("we in thrid NULL\n"); */
 				for (k = 0;  k < word; k++)
@@ -91,7 +91,6 @@ char **strtow(char *str)
 				return(NULL);
 			}
 			j++;
-			k++;
 			len = 0;
 			flag = 0;
 		}
