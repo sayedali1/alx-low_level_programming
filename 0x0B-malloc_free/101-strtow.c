@@ -97,7 +97,8 @@ char **strtow(char *str)
 		i++;
 	}
 
-	/* walk though str and copy each word in strs */
+	 /* walk though str and copy each word in strs */
+	/*
 	k = 0, i = 0,flag = 0;
 	for (j = 0; j <= _strlen(str); j++)
 	{
@@ -117,8 +118,8 @@ char **strtow(char *str)
 		}
 
 	}
-	/* printf ("%d %d\n", i, k); */
+	/* printf ("%d %d\n", i, k); 
 	strs[i][k] = '\0';
-	
+	*/
 	return (strs);
 }
