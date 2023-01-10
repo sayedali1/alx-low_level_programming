@@ -23,13 +23,14 @@ int _strlen(char *s)
 * with new line
 *@ac: numbers of argments
 *@av: argments that we want to splite
+*Return: pointer to the created str, 0 otherwise
  */
 char *argstostr(int ac, char **av)
 {
 	int i, j, len, k = 0;
 	char *str;
 
-	if (ac == 0)
+	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
