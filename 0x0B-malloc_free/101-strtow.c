@@ -19,7 +19,7 @@ char **strtow(char *str)
 	i = 0, flag = 0, word = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i - 1] == ' ' && str[i] != ' ')
+		if (str[i] != ' ')
 		{
 			flag = 1;
 		   
@@ -44,7 +44,7 @@ char **strtow(char *str)
 	i = 0, flag = 0, word = 0, len = 0, j= 0;
 	while (str[i] != '\0')
 	{
-		if (str[i - 1] == ' ' && str[i] != ' ')
+		if (str[i] != ' ')
 		{
 			flag = 1;
 		}
@@ -77,7 +77,7 @@ char **strtow(char *str)
 	while (str[i] != '\0')
 	{
 		
-		if (str[i - 1] == ' ' && str[i] != ' ')
+		if (str[i] != ' ')
 		{
 			flag = 1;
 		}
@@ -96,8 +96,7 @@ char **strtow(char *str)
 		{
 			strs[j][k] = '\0';
 			j++;
-			k = 0;
-			
+			k = 0;	
 		}
 		
 		i++;
