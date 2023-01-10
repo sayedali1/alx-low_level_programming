@@ -55,7 +55,6 @@ char *argstostr(int ac, char **av)
 		}
 		str[k++] = '\n';
 	}
-	str[k++] = '\0';
 
 	return (str);
 }
