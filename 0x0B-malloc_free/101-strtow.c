@@ -79,7 +79,12 @@ char **strtow(char *str)
 			
 			/* printf("%d %d\n", len, i); */
 			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
-			if (strs[j] == NULL)
+			
+			j++;
+			len = 0;
+			flag = 0;
+		}
+		if (strs[j] == NULL)
 			{
 				/* printf("we in thrid NULL\n"); */
 				for (k = 0;  k < word; k++)
@@ -89,10 +94,6 @@ char **strtow(char *str)
 				free(strs);
 				return(NULL);
 			}
-			j++;
-			len = 0;
-			flag = 0;
-		}
 		
 		i++;
 	}
