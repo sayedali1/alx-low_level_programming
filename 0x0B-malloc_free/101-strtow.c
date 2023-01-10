@@ -49,7 +49,6 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0'|| _strlen(str) == 0)
 	{
-		printf("we in first null \n");
 		return (NULL);
 	}
 	/* get num of words in the str */
