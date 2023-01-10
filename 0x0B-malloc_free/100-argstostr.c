@@ -37,22 +37,26 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
+		/* get the len of arguments plus one for the new line */	
 		len += (_strlen(av[i]) + 1);
 	}
-	len += 1;
+	len += 1;/* for the null terminal */
 
+	/* alloc memory of len size */
 	str = (char *)malloc(sizeof(char) * len);
-
+	/* check it */
 	if (str == NULL)
 	{
 		free(str);
 		return (NULL);
 	}
 
+	/* walk through av */
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; j < _strlen(av[i]); j++)
 		{
+			/* copy av into str and use k to walk through the str */	
 			str[k++] = *(*(av + i) + j);
 		}
 		str[k++] = '\n';
