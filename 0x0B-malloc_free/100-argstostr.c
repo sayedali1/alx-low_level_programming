@@ -22,7 +22,8 @@ int _strlen(char *s)
 *argstostr - fun that concat all the argments in one str and split
 * with new line
 *@ac: numbers of argments
-*@av: argments that we want to splite */
+*@av: argments that we want to splite
+ */
 char *argstostr(int ac, char **av)
 {
 	int i, j, len, k = 0;
@@ -35,19 +36,19 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		len += _strlen(av[i]);
+		len += (_strlen(av[i]) + 1);
 	}
-	len += (ac + 1);
+	len += 1;
 
 	str = (char *)malloc(sizeof(char) * len);
 
 	if (str == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	for (i = 0; i < ac; i++)
-	{ 
+	{
 		for (j = 0; j < _strlen(av[i]); j++)
 		{
 			str[k++] = *(*(av + i) + j);
