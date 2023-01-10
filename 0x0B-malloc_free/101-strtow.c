@@ -44,7 +44,7 @@ int check_word(char *str)
 */
 char **strtow(char *str)
 {
-	int len, word = 0, i, j, k, flag;
+	int len, word = 0, i, j, /* k */, flag;
 	char **strs;
 
 	if (str == NULL || *str == '\0'|| _strlen(str) == 1)
@@ -118,7 +118,7 @@ char **strtow(char *str)
 		}
 
 	}
-	/* printf ("%d %d\n", i, k); 
+	printf ("%d %d\n", i, k); 
 	strs[i][k] = '\0';
 	*/
 	return (strs);
