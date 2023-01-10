@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
 * _strlen - get the len of the string
@@ -30,7 +29,7 @@ int check_word(char *str)
 			word++;
 			flag = 1;
 		}
-		if (str[i] == ' ' || str[i] == '\0')
+		if (str[i] == ' ' || i == _strlen(str) - 1)
 		{
 			flag = 0;
 		}
@@ -45,7 +44,7 @@ int check_word(char *str)
 */
 char **strtow(char *str)
 {
-	int len, word = 0, i, j, k;
+	int len, word = 0, i, j, k, flag;
 	char **strs;
 
 	if (str == NULL || *str == '\0'|| _strlen(str) == 0)
@@ -55,6 +54,7 @@ char **strtow(char *str)
 	}
 	/* get num of words in the str */
 	word = check_word(str);
+	
 	/* create memory size of words */
 	strs = malloc(sizeof(char *) * word);
 
@@ -66,32 +66,26 @@ char **strtow(char *str)
 	}
 	
 	/* get the len of each word in the str */
-	i = 0, len = 0, j = 0;
+	i = 0, len = 0, j = 0,flag = 0;
 	while (i <= _strlen(str))
 	{
-		
 		if (str[i] != ' ')
 		{
 			len++;
+			flag = 1;
 		}
-
-		if (str[i] == ' ')
+		if ((str[i] == ' ' || i == _strlen(str) - 1)&& flag == 1)
 		{
+
 			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
 			len = 0;
 			j++;
+			flag = 0;
 		}
-		else if (str[i] == '\0')
-		{
-			strs[j] = (char *)malloc(sizeof(char) * (len));
-			len = 0;
-			j++;
-		}
-
 		if (strs[j] == NULL)
 		{
 			printf("we in thrid NULL\n");
-			for (i = 0; i < word; i++)
+			for (j = 0; j < word; i++)
 			{
 				free(strs[j]);
 			}
@@ -102,19 +96,23 @@ char **strtow(char *str)
 	}
 
 	/* walk though str and copy each word in strs */
-	k = 0, i = 0;
+	k = 0, i = 0,flag = 0;
 	for (j = 0; j <= _strlen(str); j++)
 	{
+		
 		if (str[j] != ' ')
 		{
+			flag = 1;
 			strs[i][k] = str[j];
 			k++;
 		}
-		else if (str[j] == ' ' || str[j] == '\0')
+		if ((str[j] == ' ' || j == _strlen(str) - 1) && flag == 1)
 		{	
 			strs[i][k] = '\0';
 			i++;
 			k = 0;
+			flag = 0;
+
 		}
 	}
 
