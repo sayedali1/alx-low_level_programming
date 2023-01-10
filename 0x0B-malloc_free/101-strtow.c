@@ -22,18 +22,17 @@ int _strlen(char *s)
 
 int check_word(char *str)
 {
-	int i = 0, flag = 0, word = 0;
-	while (str[i] != '\0')
+	int i = 0, word = 0, flag = 0;
+	while (i <= _strlen(str))
 	{
 		if (str[i] != ' ' && flag == 0)
 		{
-			flag = 1;
 			word++;
+			flag = 1;
 		}
-		else if (str[i] == ' ')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
 			flag = 0;
-			
 		}
 		i++;
 	}
@@ -49,7 +48,7 @@ char **strtow(char *str)
 	int len, word = 0, i, j, k;
 	char **strs;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0'|| _strlen(str) == 0)
 	{
 		return (NULL);
 	}
@@ -76,16 +75,12 @@ char **strtow(char *str)
 
 		if (str[i] == ' ')
 		{
-	
-			
 			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
 			len = 0;
 			j++;
 		}
 		else if (str[i] == '\0')
 		{
-
-
 			strs[j] = (char *)malloc(sizeof(char) * (len));
 			len = 0;
 			j++;
