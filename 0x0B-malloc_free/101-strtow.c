@@ -1,6 +1,44 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+
+/**
+* _strlen - get the len of the string
+* @s: the string
+* Return: the len
+*/
+int _strlen(char *s)
+{
+	int lenth = 0;
+
+	while (*s != '\0')
+	{
+		lenth++;
+		s++;
+	}
+
+	return (lenth);
+}
+
+int check_word(char *str)
+{
+	int i = 0, flag = 0, word = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] != ' ' && flag == 0)
+		{
+			flag = 1;
+			word++;
+		}
+		else if (str[i] == ' ')
+		{
+			flag = 0;
+			
+		}
+		i++;
+	}
+	return (word);
+}
 /**
 *strtow - fun that splite str into array of strings
 *@str: str we want to splite
@@ -8,7 +46,7 @@
 */
 char **strtow(char *str)
 {
-	int len, word, flag, i, j, k;
+	int len, word = 0, i, j, k;
 	char **strs;
 
 	if (str == NULL || *str == '\0')
@@ -16,90 +54,71 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	/* get num of words in the str */
-	i = 0, flag = 0, word = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] != ' ')
-		{
-			flag = 1;
-		   
-		}
-		else if (str[i] == ' ' && flag == 1)
-		{
-			flag = 0;
-			word++;
-		}
-		i++;
-	}
-
+	word = check_word(str);
 	/* create memory size of words */
 	strs = malloc(sizeof(char *) * word);
 
 	if (strs == NULL)
 	{
+		free(strs);
 		return (NULL);
 	}
-
+	
 	/* get the len of each word in the str */
-	i = 0, flag = 0, word = 0, len = 0, j= 0;
-	while (str[i] != '\0')
+	i = 0, len = 0, j = 0;
+	while (i <= _strlen(str))
 	{
+		
 		if (str[i] != ' ')
-		{
-			flag = 1;
-		}
-		else if (str[i] == ' ' && flag == 1)
-		{
-			flag = 0;
-		}
-		if (flag == 1)
 		{
 			len++;
 		}
-		/* create memory size of len */
-		if (flag == 0 && len > 0)
-		{
-			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
 
-			if (strs[j] == NULL)
-			{
-				free(strs);
-				return(NULL);
-			}
+		if (str[i] == ' ')
+		{
+	
+			
+			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
 			len = 0;
 			j++;
+		}
+		else if (str[i] == '\0')
+		{
+
+
+			strs[j] = (char *)malloc(sizeof(char) * (len));
+			len = 0;
+			j++;
+		}
+
+		if (strs[j] == NULL)
+		{
+			for (i = 0; i < word; i++)
+			{
+				free(strs[j]);
+			}
+			free(strs);
+			return(NULL);
 		}
 		i++;
 	}
 
 	/* walk though str and copy each word in strs */
-	i = 0 , flag = 0, j = 0, k = 0 ;
-	while (str[i] != '\0')
+	k = 0, i = 0;
+	for (j = 0; j <= _strlen(str); j++)
 	{
-		
-		if (str[i] != ' ')
+		if (str[j] != ' ')
 		{
-			flag = 1;
+			strs[i][k] = str[j];
+			k++;
 		}
-		else if (str[i] == ' ' && flag == 1)
-		{
-			flag = 0;
+		else if (str[j] == ' ' || str[j] == '\0')
+		{	
+			strs[i][k] = '\0';
+			i++;
+			k = 0;
 		}
-
-		if (flag == 1)
-		{
-			strs[j][k++] = str[i]; 
-			
-		}
-
-		if (str[i + 1] == ' ' && flag == 1)
-		{
-			strs[j][k] = '\0';
-			j++;
-			k = 0;	
-		}
-		
-		i++;
 	}
+
 	return (strs);
 }
