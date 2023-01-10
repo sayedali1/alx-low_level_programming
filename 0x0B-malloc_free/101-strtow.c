@@ -35,7 +35,7 @@ char **strtow(char *str)
 	/* create memory size of words */
 	strs = malloc(sizeof(char *) * word);
 
-	if(strs == NULL)
+	if (strs == NULL)
 	{
 		return (NULL);
 	}
@@ -59,7 +59,7 @@ char **strtow(char *str)
 		/* create memory size of len */
 		if (flag == 0 && len > 0)
 		{
-			strs[j] = (char *)malloc(sizeof(char) * len + 2);
+			strs[j] = (char *)malloc(sizeof(char) * len + 1);
 
 			if (strs[j] == NULL)
 			{
