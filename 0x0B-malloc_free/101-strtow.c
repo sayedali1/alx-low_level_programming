@@ -78,7 +78,7 @@ char **strtow(char *str)
 		{
 			
 			/* printf("%d %d\n", len, i); */
-			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
+			strs[j] = malloc(sizeof(char) * (len + 1));
 
 			if (strs[k] == NULL)
 			{
@@ -95,7 +95,6 @@ char **strtow(char *str)
 			len = 0;
 			flag = 0;
 		}
-		
 		i++;
 	}
 
