@@ -53,7 +53,7 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	/* get num of words in the str */
-	word = check_word(str) + 1;
+	word += check_word(str) ;
 	
 	/* create memory size of words */
 	strs = malloc(sizeof(char *) * word);
