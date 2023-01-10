@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-/* #include <stdio.h> */
+#include <stdio.h>
 /**
 * _strlen - get the len of the string
 * @s: the string
@@ -37,6 +37,28 @@ int check_word(char *str)
 	}
 	return (word);
 }
+
+	/* get the len of each word in the str */
+int get_len(char *str, int *i)
+{
+	int len = 0, flag = 0;
+	while (*i <= _strlen(str))
+	{
+		if ((str[*i] != ' ' && str[*i] != '\0'))
+		{
+			len++;
+			flag = 1;
+		}
+		else if ((str[*i] == ' ' || str[*i] == '\0' || *i == (_strlen(str) - 1)) && flag == 1)
+		{
+			/* printf("%d %d\n", len, i); */
+			return (len);
+			flag = 0;
+		}
+		*i += 1 ;
+	}
+	return (0);
+}
 /**
 *strtow - fun that splite str into array of strings
 *@str: str we want to splite
@@ -44,8 +66,9 @@ int check_word(char *str)
 */
 char **strtow(char *str)
 {
-	int len, word = 0, i, j, /* k */ flag;
+	int len, word = 0, i, j /* k  flag*/;
 	char **strs;
+	int *p;
 
 	if (str == NULL || *str == '\0'|| _strlen(str) == 1)
 	{
@@ -65,38 +88,26 @@ char **strtow(char *str)
 		return (NULL);
 	}
 	
-	/* get the len of each word in the str */
-	i = 0, len = 0, j = 0,flag = 0;
-	while (i <= _strlen(str))
+	j = 0;
+	for (i = 0; i < word; i++)
 	{
-		if ((str[i] != ' ' && str[i] != '\0'))
-		{
-			len++;
-			flag = 1;
-		}
-		else if ((str[i] == ' ' || str[i] == '\0' || i == (_strlen(str) - 1)) && flag == 1)
-		{
-			
-			/* printf("%d %d\n", len, i); */
-			strs[j] = malloc(sizeof(char) * (len + 1));
+		p = &j;
 
-			if (strs[j] == NULL)
+		len = get_len(str, p);
+		/* printf("%d ", len);	 */	
+		strs[i] = malloc(sizeof(char) * (len + 1));
+
+		if (strs[i] == NULL)
+		{
+			/* printf("we in thrid NULL\n"); */
+			for (i = 0;  i < word; i++)
 			{
-				/* printf("we in thrid NULL\n"); */
-				for (j = 0;  j < word; j++)
-				{
-					free(strs[j]);
-				}
-				free(strs);
-				return(NULL);
+				free(strs[i]);
 			}
-			j++;
-			len = 0;
-			flag = 0;
+			free(strs);
+			return(NULL);
 		}
-		i++;
 	}
-
 	 /* walk though str and copy each word in strs */
 	/*
 	k = 0, i = 0,flag = 0;
