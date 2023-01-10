@@ -66,7 +66,7 @@ char **strtow(char *str)
 	}
 	
 	/* get the len of each word in the str */
-	i = 0, len = 0, j = 0,flag = 0, k = 0;
+	i = 0, len = 0, j = 0,flag = 0;
 	while (i <= _strlen(str))
 	{
 		if ((str[i] != ' ' && str[i] != '\0'))
@@ -83,9 +83,9 @@ char **strtow(char *str)
 			if (strs[j] == NULL)
 			{
 				/* printf("we in thrid NULL\n"); */
-				for (k = 0;  k < word; k++)
+				for (j = 0;  j < word; j++)
 				{
-					free(strs[k]);
+					free(strs[j]);
 				}
 				free(strs);
 				return(NULL);
