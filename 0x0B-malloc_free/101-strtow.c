@@ -8,102 +8,102 @@
 */
 char **strtow(char *str)
 {
-    int len, word, flag, i, j,  k;
-    char **strs;
+	int len, word, flag, i, j,  k;
+	char **strs;
 
-    if (str == NULL)
-    {
-        return (NULL);
-    }
-    /* get num of words in the str */
-    i = 0, flag = 0, word = 0;
-    while (str[i] != '\0')
-    {
-        if (str[i - 1] == ' ' && str[i] != ' ')
-        {
-            flag = 1;
-           
-        }
-        else if (str[i] == ' ' && flag == 1)
-        {
-            flag = 0;
-            word++;
-        }
-        i++;
-    }
+	if (str == NULL || str == '\0')
+	{
+		return (NULL);
+	}
+	/* get num of words in the str */
+	i = 0, flag = 0, word = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i - 1] == ' ' && str[i] != ' ')
+		{
+			flag = 1;
+		   
+		}
+		else if (str[i] == ' ' && flag == 1)
+		{
+			flag = 0;
+			word++;
+		}
+		i++;
+	}
 
-    /* create memory size of words */
-    strs = malloc(sizeof(char *) * word);
+	/* create memory size of words */
+	strs = malloc(sizeof(char *) * word);
 
-    if(strs == NULL)
-    {
-        return (NULL);
-    }
+	if(strs == NULL)
+	{
+		return (NULL);
+	}
 
-    /* get the len of each word in the str */
-    i = 0, flag = 0, word = 0, len = 0, j= 0;
-    while (str[i] != '\0')
-    {
-        if (str[i - 1] == ' ' && str[i] != ' ')
-        {
-            flag = 1;
-        }
-        else if (str[i] == ' ' && flag == 1)
-        {
-            flag = 0;
-        }
-        if (flag == 1)
-        {
-            len++;
-        }
-        /* create memory size of len */
-        if (flag == 0 && len > 0)
-        {
-            strs[j] = malloc(sizeof(char) * len + 2);
+	/* get the len of each word in the str */
+	i = 0, flag = 0, word = 0, len = 0, j= 0;
+	while (str[i] != '\0')
+	{
+		if (str[i - 1] == ' ' && str[i] != ' ')
+		{
+			flag = 1;
+		}
+		else if (str[i] == ' ' && flag == 1)
+		{
+			flag = 0;
+		}
+		if (flag == 1)
+		{
+			len++;
+		}
+		/* create memory size of len */
+		if (flag == 0 && len > 0)
+		{
+			strs[j] = (char *)malloc(sizeof(char) * len + 2);
 
-            if (strs[j] == NULL)
-            {
-                for (i = 0; i < j; i++)
-                {
-                    free(strs[i]);
-                }
-                free(strs);
-                return(NULL);
-            }
-            len = 0;
-            j++;
-        }
-        i++;
-    }
+			if (strs[j] == NULL)
+			{
+				for (i = 0; i < j; i++)
+				{
+					free(strs[i]);
+				}
+				free(strs);
+				return(NULL);
+			}
+			len = 0;
+			j++;
+		}
+		i++;
+	}
 
-    /* walk though str and copy each word in strs */
-    i = 0 , flag = 0, j = 0, k = 0 ;
-    while (str[i] != '\0')
-    {
-        
-        if (str[i - 1] == ' ' && str[i] != ' ')
-        {
-            flag = 1;
-        }
-        else if (str[i] == ' ' && flag == 1)
-        {
-            flag = 0;
-        }
+	/* walk though str and copy each word in strs */
+	i = 0 , flag = 0, j = 0, k = 0 ;
+	while (str[i] != '\0')
+	{
+		
+		if (str[i - 1] == ' ' && str[i] != ' ')
+		{
+			flag = 1;
+		}
+		else if (str[i] == ' ' && flag == 1)
+		{
+			flag = 0;
+		}
 
-        if (flag == 1)
-        {
-            strs[j][k++] = str[i]; 
-            
-        }
+		if (flag == 1)
+		{
+			strs[j][k++] = str[i]; 
+			
+		}
 
-        if (str[i + 1] == ' ' && flag == 1)
-        {
-            strs[j][k] = '\0';
-            j++;
-            k = 0;
-        }
-        
-        i++;
-    }
-    return (strs);
+		if (str[i + 1] == ' ' && flag == 1)
+		{
+			strs[j][k] = '\0';
+			j++;
+			k = 0;
+		}
+		
+		i++;
+	}
+	return (strs);
 }
