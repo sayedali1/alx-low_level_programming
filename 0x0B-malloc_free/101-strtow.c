@@ -50,6 +50,7 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0'|| _strlen(str) == 0)
 	{
+		printf("we in first null \n");
 		return (NULL);
 	}
 	/* get num of words in the str */
@@ -59,6 +60,7 @@ char **strtow(char *str)
 
 	if (strs == NULL)
 	{
+		printf("we in sec null\n");
 		free(strs);
 		return (NULL);
 	}
@@ -88,6 +90,7 @@ char **strtow(char *str)
 
 		if (strs[j] == NULL)
 		{
+			printf("we in thrid NULL\n");
 			for (i = 0; i < word; i++)
 			{
 				free(strs[j]);
