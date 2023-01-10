@@ -8,7 +8,7 @@
 */
 char **strtow(char *str)
 {
-	int len, word, flag, i, j,  k;
+	int len, word, flag, i, j, k;
 	char **strs;
 
 	if (str == NULL || *str == '\0')
@@ -59,14 +59,10 @@ char **strtow(char *str)
 		/* create memory size of len */
 		if (flag == 0 && len > 0)
 		{
-			strs[j] = (char *)malloc(sizeof(char) * len + 1);
+			strs[j] = (char *)malloc(sizeof(char) * (len + 1));
 
 			if (strs[j] == NULL)
 			{
-				for (i = 0; i < j; i++)
-				{
-					free(strs[i]);
-				}
 				free(strs);
 				return(NULL);
 			}
@@ -101,6 +97,7 @@ char **strtow(char *str)
 			strs[j][k] = '\0';
 			j++;
 			k = 0;
+			
 		}
 		
 		i++;
