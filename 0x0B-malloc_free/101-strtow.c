@@ -61,7 +61,7 @@ char **strtow(char *str)
 	if (strs == NULL)
 	{
 		/* printf("we in sec null\n"); */
-		/* free(strs); */
+		free(strs);
 		return (NULL);
 	}
 	
