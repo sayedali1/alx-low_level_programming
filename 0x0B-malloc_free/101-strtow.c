@@ -125,7 +125,7 @@ char **strtow(char *str)
 		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
 		if (strs[i] == NULL)
 		{
-			for (i = 0;  i < len ; i++)
+			for (i = 0;  i <= word ; i++)
 				free(strs[i]);
 			free(strs);
 			return (NULL);
