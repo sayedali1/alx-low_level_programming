@@ -66,7 +66,7 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len, word = 0, i, j /* k  flag*/;
+	int len, word = 0, i, j, k,  flag;
 	char **strs;
 	int *p;
 
@@ -109,7 +109,7 @@ char **strtow(char *str)
 		}
 	}
 	 /* walk though str and copy each word in strs */
-	/*
+	
 	k = 0, i = 0,flag = 0;
 	for (j = 0; j <= _strlen(str); j++)
 	{
@@ -129,8 +129,8 @@ char **strtow(char *str)
 		}
 
 	}
-	printf ("%d %d\n", i, k); 
+	/* printf ("%d %d\n", i, k); */ 
 	strs[i][k] = '\0';
-	*/
+
 	return (strs);
 }
