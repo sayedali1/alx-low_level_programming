@@ -107,7 +107,7 @@ char **strtow(char *str)
 	}
 	
 	j = 0;
-	for (i = 0; i < word; i++)
+	for (i = 0; i < word + 1 ; i++)
 	{
 		p = &j;
 
@@ -125,7 +125,11 @@ char **strtow(char *str)
 			free(strs);
 			return(NULL);
 		}
-		strs[i]= _strncpy(strs[i], &str[*p - len], len + 1);
+		
+		 
+		strs[i]= _strncpy(strs[i], &str[*p - len+1] , len);
+		
 	}
+
 	return (strs);
 }
