@@ -93,14 +93,14 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p);
+		len = get_len(str, p) + 1;
 		/* printf("%d ", len);	 */	
-		strs[i] = malloc(sizeof(char) * (len + 1));
+		strs[i] = (char *)malloc(sizeof(char) * (len));
 
 		if (strs[i] == NULL)
 		{
 			/* printf("we in thrid NULL\n"); */
-			for (i = 0;  i < len; i++)
+			for (i = 0;  i < word; i++)
 			{
 				free(strs[i]);
 			}
