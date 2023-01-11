@@ -100,9 +100,9 @@ char **strtow(char *str)
 		if (strs[i] == NULL)
 		{
 			/* printf("we in thrid NULL\n"); */
-			for (i = 0;  i < word; i++)
+			for (i = 0;  i < len; i++)
 			{
-				free(strs[i]);
+				free(strs[len]);
 			}
 			free(strs);
 			return(NULL);
