@@ -92,14 +92,8 @@ char **strtow(char *str)
 	for (i = 0; i < word; ++i)
 	{
 		p = &j;
-		if (i == word - 1)
-		{
-			len = get_len(str, p);
-		}
-		else 
-		{
-			len = get_len(str, p) - 1;
-		}
+
+		len = get_len(str, p) + 1;
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * (len));
 
