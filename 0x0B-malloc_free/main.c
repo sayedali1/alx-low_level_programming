@@ -27,14 +27,13 @@ int main(void)
 {
     char **tab;
 
-    tab = strtow("Talk is cheap. Show me the code.");
-    /* tab = strtow("      ALX School         #cisfun      "); */
+    /* tab = strtow("Talk is cheap. Show me the code."); */
+    tab = strtow("      ALX School         #cisfun      ");
     if (tab == NULL)
     {
         printf("Failed\n");
         return (1);
     }
     print_tab(tab);
-    free(tab);
     return (0);
 }
