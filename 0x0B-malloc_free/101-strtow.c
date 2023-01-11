@@ -36,6 +36,11 @@ char *_strncpy(char *dest, char *src, int n)
 	dest[i] = '\0';
 	return (dest);
 }
+/**
+*check_word - fun that get num on words in the str
+*@str: pointer to the first element in str
+*Return: num of words
+*/
 
 int check_word(char *str)
 {
@@ -57,7 +62,12 @@ int check_word(char *str)
 	return (word);
 }
 
-	/* get the len of each word in the str */
+/**
+*get_len - get the len of each word in the str
+*@str: pointer to the first element in str
+*@i: pointer to hold the number of the index
+*Return: len of the word, 0 otherwise
+*/
 int get_len(char *str, int *i)
 {
 	int len = 0, flag = 0;
@@ -76,10 +86,11 @@ int get_len(char *str, int *i)
 			return (len);
 			flag = 0;
 		}
-		*i += 1 ;
+		*i += 1;
 	}
 	return (0);
 }
+
 /**
 *strtow - fun that splite str into array of strings
 *@str: str we want to splite
@@ -91,15 +102,15 @@ char **strtow(char *str)
 	char **strs;
 	int *p;
 
-	for (i = 0; i < _strlen(str);i++)
+	for (i = 0; i < _strlen(str); i++)
 		if (str[i] != ' ')
 			j++;
 	if (str == NULL || *str == '\0' || j == 0)
 		return (NULL);
-	
+
 	word = check_word(str);/* get num of words in the str */
 	strs = malloc(sizeof(char *) * (word + 1));/* create memory size of words */
-	
+
 	if (strs == NULL)
 	{
 		for (i = 0; i < word; i++)
@@ -121,9 +132,9 @@ char **strtow(char *str)
 				free(strs[i]);
 
 			free(strs);
-			return(NULL);
+			return (NULL);
 		}
-		strs[i]= _strncpy(strs[i], &str[*p - len] , len);
+		strs[i] = _strncpy(strs[i], &str[*p - len], len);
 	}
 	strs[i] = '\0';
 	return (strs);
