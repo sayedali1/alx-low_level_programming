@@ -126,8 +126,11 @@ char **strtow(char *str)
 		if (strs[i] == NULL)
 		{
 			for (i = 0;  i < len ; i++)
+			{
+				for (j = 0;  j < len ; j++)
+					free(strs[j]);
 				free(strs[i]);
-			free(strs);
+			}
 			return (NULL);
 		}
 		/* cpy each word in strs */
