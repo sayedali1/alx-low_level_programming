@@ -117,18 +117,15 @@ char **strtow(char *str)
 
 		if (strs[i] == NULL)
 		{
-			printf("we in thrid NULL\n"); 
-			for (i = 0;  i < word; i++)
+			/* printf("we in thrid NULL\n");  */
+			for (i = 0;  i < word + 1; i++)
 			{
 				free(strs[i]);
 			}
 			free(strs);
 			return(NULL);
 		}
-	
 		strs[i]= _strncpy(strs[i], &str[*p - len +1], len - 1);
-
 	}
-	
 	return (strs);
 }
