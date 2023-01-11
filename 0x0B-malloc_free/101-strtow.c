@@ -18,6 +18,25 @@ int _strlen(char *s)
 
 	return (lenth);
 }
+/**
+*_strncpy - cpy string to another
+*@dest: first str
+*@src:sec str
+*@n: num for char to be copied
+*Return: first str
+*/
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n ; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	dest[i] = '\0';
+	return (dest);
+}
 
 int check_word(char *str)
 {
@@ -66,7 +85,7 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len = 0, word = 0, i, j, k,  flag;
+	int len = 0, word = 0, i, j;
 	char **strs;
 	int *p;
 
@@ -96,7 +115,7 @@ char **strtow(char *str)
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * len);
 
-		/* if (strs[i] == NULL)
+		if (strs[i] == NULL)
 		{
 			printf("we in thrid NULL\n"); 
 			for (i = 0;  i < word; i++)
@@ -105,31 +124,12 @@ char **strtow(char *str)
 			}
 			free(strs);
 			return(NULL);
-		} */
-	}
-	 /* walk though str and copy each word in strs */
+		}
 	
-	k = 0, i = 0,flag = 0;
-	for (j = 0; j <= _strlen(str); j++)
-	{
-		
-		if (str[j] != ' ' && str[j] != '\0')
-		{ 
-			flag = 1;
-			strs[i][k++] = str[j];
-		}
-		else if ((str[j] == ' ' || str[j] == '\0' || j == _strlen(str) - 1) && flag == 1)
-		{	/* rintf("%d ", j); */
-			strs[i][k] = '\0';
-			i++;
-			k = 0;
-			flag = 0;
-		}
-	 	if (j == _strlen(str))
-		{
-			strs[i][k] = '\0';
-		} 
+		printf("%d \n", (*p - len + 1));
+		strs[i]= _strncpy(strs[i], &str[*p - len +1], len - 1);
+
 	}
-	/* printf ("%d %d\n", i, k); */ 
+	
 	return (strs);
 }
