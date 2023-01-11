@@ -130,7 +130,7 @@ char **strtow(char *str)
 
 	}
 	/* printf ("%d %d\n", i, k); */ 
-	/* strs[i][k] = '\0'; */
+	strs[i][k] = '\0';
 
 	return (strs);
 }
