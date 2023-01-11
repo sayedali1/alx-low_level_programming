@@ -88,7 +88,7 @@ char **strtow(char *str)
 	}
 	
 	j = 0;
-	for (i = 0; i < word; i++)
+	for (i = 1; i < word; i++)
 	{
 		p = &j;
 
