@@ -70,7 +70,7 @@ char **strtow(char *str)
 	char **strs;
 	int *p;
 
-	if (str == NULL || *str == '\0'|| _strlen(str) < 1)
+	if (str == NULL || *str == '\0'|| _strlen(str) <= 1)
 	{
 		/* printf("we in first null \n"); */
 		return (NULL);
@@ -127,10 +127,13 @@ char **strtow(char *str)
 			k = 0;
 			flag = 0;
 		}
-
+		if (j == _strlen(str))
+		{
+			strs[i][k] = '\0';
+		}
 	}
 	/* printf ("%d %d\n", i, k); */ 
-	strs[i][k] = '\0';
+	
 
 	return (strs);
 }
