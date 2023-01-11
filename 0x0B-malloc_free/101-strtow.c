@@ -127,10 +127,10 @@ char **strtow(char *str)
 			k = 0;
 			flag = 0;
 		}
-		if (j == _strlen(str))
+		/* if (j == _strlen(str))
 		{
 			strs[i][k] = '\0';
-		}
+		} */
 	}
 	/* printf ("%d %d\n", i, k); */ 
 	
