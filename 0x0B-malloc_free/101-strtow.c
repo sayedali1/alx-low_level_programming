@@ -90,10 +90,9 @@ char **strtow(char *str)
 
 	j=0;
 	for (i = 0; i < _strlen(str);i++)
-	{
 		if (str[i] != ' ')
 			j++;
-	}
+
 	if (str == NULL || *str == '\0' || j == 0)
 		return (NULL);
 	
@@ -118,9 +117,8 @@ char **strtow(char *str)
 		if (strs[i] == NULL)
 		{
 			for (i = 0;  i < word ; i++)
-			{
 				free(strs[i]);
-			}
+				
 			free(strs);
 			return(NULL);
 		}
