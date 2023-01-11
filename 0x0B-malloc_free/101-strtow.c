@@ -88,7 +88,7 @@ char **strtow(char *str)
 	}
 	
 	j = 0;
-	for (i = 1; i < word; i++)
+	for (i = 0; i < word; i++)
 	{
 		p = &j;
 
@@ -96,16 +96,16 @@ char **strtow(char *str)
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * len);
 
-		if (strs[i] == NULL)
+		/* if (strs[i] == NULL)
 		{
-			/* printf("we in thrid NULL\n"); */
+			/* printf("we in thrid NULL\n"); 
 			for (i = 0;  i < word; i++)
 			{
 				free(strs[i]);
 			}
 			free(strs);
 			return(NULL);
-		}
+		} */
 	}
 	 /* walk though str and copy each word in strs */
 	
