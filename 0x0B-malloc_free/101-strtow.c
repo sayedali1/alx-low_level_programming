@@ -40,6 +40,7 @@ char *_strncpy(char *dest, char *src, int n)
 int check_word(char *str)
 {
 	int i = 0, word = 0, flag = 0;
+
 	while (i <= _strlen(str))
 	{
 		if ((str[i] != ' ' && str[i] != '\0') && flag == 0)
@@ -60,6 +61,7 @@ int check_word(char *str)
 int get_len(char *str, int *i)
 {
 	int len = 0, flag = 0;
+
 	while (*i <= _strlen(str))
 	{
 		if ((str[*i] != ' ' && str[*i] != '\0'))
@@ -67,7 +69,8 @@ int get_len(char *str, int *i)
 			len++;
 			flag = 1;
 		}
-		else if ((str[*i] == ' ' || str[*i] == '\0' || *i == (_strlen(str) - 1)) && flag == 1)
+		else if ((str[*i] == ' ' || str[*i] == '\0' ||
+		 *i == (_strlen(str) - 1)) && flag == 1)
 		{
 			/* printf("%d %d\n", len, i); */
 			return (len);
