@@ -113,11 +113,8 @@ char **strtow(char *str)
 
 	if (strs == NULL)
 	{
-		for (i = 0; i < word; i++)
-		{
-			free(strs);
-			return (NULL);
-		}
+		free(strs);
+		return (NULL);
 	}
 	j = 0;
 	for (i = 0; i < word ; i++)
@@ -128,7 +125,7 @@ char **strtow(char *str)
 		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
 		if (strs[i] == NULL)
 		{
-			for (i = 0;  i < word ; i++)
+			for (i = 0;  i < len ; i++)
 				free(strs[i]);
 			free(strs);
 			return (NULL);
