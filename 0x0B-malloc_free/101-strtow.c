@@ -101,7 +101,7 @@ char **strtow(char *str)
 	int len = 0, word = 0, i, j = 0;
 	char **strs;
 	int *p;
-
+	/* check is the str is empty */
 	for (i = 0; i < _strlen(str); i++)
 		if (str[i] != ' ')
 			j++;
@@ -122,18 +122,18 @@ char **strtow(char *str)
 	j = 0;
 	for (i = 0; i < word ; i++)
 	{
-		p = &j;
-		len = get_len(str, p);
+		p = &j;/* pointer to counter j to hold the index */
+		len = get_len(str, p);/* get the len of each word */
+		/* create memory size of len */
 		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
-
 		if (strs[i] == NULL)
 		{
 			for (i = 0;  i < word ; i++)
 				free(strs[i]);
-
 			free(strs);
 			return (NULL);
 		}
+		/* cpy each word in strs */
 		strs[i] = _strncpy(strs[i], &str[*p - len], len);
 	}
 	strs[i] = '\0';
