@@ -98,12 +98,15 @@ char **strtow(char *str)
 	word = check_word(str);
 	/* create memory size of words */
 	strs = malloc(sizeof(char *) * (word + 1));
-
+	
 	if (strs == NULL)
 	{
 		/* printf("we in sec null\n"); */
-		free(strs);
-		return (NULL);
+		for (i = 0; i < word; i++)
+		{
+			free(strs[i]);
+			return (NULL);
+		}
 	}
 	
 	j = 0;
