@@ -84,15 +84,13 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len = 0, word = 0, i, j;
+	int len = 0, word = 0, i, j = 0;
 	char **strs;
 	int *p;
 
-	j=0;
 	for (i = 0; i < _strlen(str);i++)
 		if (str[i] != ' ')
 			j++;
-
 	if (str == NULL || *str == '\0' || j == 0)
 		return (NULL);
 	
@@ -118,7 +116,7 @@ char **strtow(char *str)
 		{
 			for (i = 0;  i < word ; i++)
 				free(strs[i]);
-				
+
 			free(strs);
 			return(NULL);
 		}
