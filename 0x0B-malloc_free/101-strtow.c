@@ -97,7 +97,7 @@ char **strtow(char *str)
 	/* get num of words in the str */
 	word = check_word(str);
 	/* create memory size of words */
-	strs = malloc(sizeof(char *) * (word+1));
+	strs = malloc(sizeof(char *) * (word + 1));
 
 	if (strs == NULL)
 	{
@@ -118,7 +118,7 @@ char **strtow(char *str)
 		if (strs[i] == NULL)
 		{
 			/* printf("we in thrid NULL\n");  */
-			for (i = 0;  i < word + 1; i++)
+			for (i = 0;  i < word ; i++)
 			{
 				free(strs[i]);
 			}
@@ -127,6 +127,6 @@ char **strtow(char *str)
 		}
 		strs[i]= _strncpy(strs[i], &str[*p - len], len + 1);
 	}
-	strs[i][0] = '\0';
+	/* strs[i][0] = '\0'; */
 	return (strs);
 }
