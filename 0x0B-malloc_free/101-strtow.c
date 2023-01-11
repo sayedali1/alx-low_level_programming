@@ -111,14 +111,13 @@ char **strtow(char *str)
 	 /* walk though str and copy each word in strs */
 	
 	k = 0, i = 0,flag = 0;
-	for (j = 0; j <= _strlen(str); ++j)
+	for (j = 0; j <= _strlen(str); j++)
 	{
 		
 		if (str[j] != ' ' && str[j] != '\0')
 		{ 
 			flag = 1;
-			strs[i][k] = str[j];
-			k++;
+			strs[i][k++] = str[j];
 		}
 		else if ((str[j] == ' ' || str[j] == '\0' || j == _strlen(str) - 1) && flag == 1)
 		{	/* rintf("%d ", j); */
@@ -133,7 +132,5 @@ char **strtow(char *str)
 		} 
 	}
 	/* printf ("%d %d\n", i, k); */ 
-	
-
 	return (strs);
 }
