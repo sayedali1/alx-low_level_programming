@@ -95,37 +95,28 @@ char **strtow(char *str)
 			j++;
 	}
 	if (str == NULL || *str == '\0' || j == 0)
-	{
-		/* printf("we in first null \n"); */
 		return (NULL);
-	}
-	/* get num of words in the str */
-	word = check_word(str);
-	/* create memory size of words */
-	strs = malloc(sizeof(char *) * (word + 1));
+	
+	word = check_word(str);/* get num of words in the str */
+	strs = malloc(sizeof(char *) * (word + 1));/* create memory size of words */
 	
 	if (strs == NULL)
 	{
-		/* printf("we in sec null\n"); */
 		for (i = 0; i < word; i++)
 		{
-			free(strs[i]);
+			free(strs);
 			return (NULL);
 		}
 	}
-	
 	j = 0;
 	for (i = 0; i < word ; i++)
 	{
 		p = &j;
-
 		len = get_len(str, p);
-		/* printf("%d ", len);	 */
 		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
 
 		if (strs[i] == NULL)
 		{
-			/* printf("we in thrid NULL\n");  */
 			for (i = 0;  i < word ; i++)
 			{
 				free(strs[i]);
