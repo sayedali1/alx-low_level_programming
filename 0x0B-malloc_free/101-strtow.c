@@ -102,7 +102,7 @@ char **strtow(char *str)
 			/* printf("we in thrid NULL\n"); */
 			for (i = 0;  i < len; i++)
 			{
-				free(strs[len]);
+				free(strs[i]);
 			}
 			free(strs);
 			return(NULL);
