@@ -126,7 +126,6 @@ char **strtow(char *str)
 			return(NULL);
 		}
 	
-		printf("%d \n", (*p - len + 1));
 		strs[i]= _strncpy(strs[i], &str[*p - len +1], len - 1);
 
 	}
