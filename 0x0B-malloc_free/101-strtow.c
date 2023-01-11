@@ -87,11 +87,14 @@ char **strtow(char *str)
 	int len = 0, word = 0, i, j;
 	char **strs;
 	int *p;
-	
-	if(_strlen(str) == 1)
-		return (NULL);
 
-	if (str == NULL || *str == '\0')
+	j=0;
+	for (i = 0; i < _strlen(str);i++)
+	{
+		if (str[i] != ' ')
+			j++;
+	}
+	if (str == NULL || *str == '\0' || j == 0)
 	{
 		/* printf("we in first null \n"); */
 		return (NULL);
