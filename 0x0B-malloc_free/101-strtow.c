@@ -66,7 +66,7 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len, word = 0, i, j, k,  flag;
+	int len = 0, word = 0, i, j, k,  flag;
 	char **strs;
 	int *p;
 
@@ -93,7 +93,7 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p);
+		len = get_len(str, p) + 1;
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * (len));
 
@@ -121,16 +121,16 @@ char **strtow(char *str)
 			k++;
 		}
 		else if ((str[j] == ' ' || str[j] == '\0' || j == _strlen(str) - 1) && flag == 1)
-		{	
+		{	/* rintf("%d ", j); */
 			strs[i][k] = '\0';
 			i++;
 			k = 0;
 			flag = 0;
 		}
-		if (j == _strlen(str))
+	 	if (j == _strlen(str))
 		{
 			strs[i][k] = '\0';
-		}
+		} 
 	}
 	/* printf ("%d %d\n", i, k); */ 
 	
