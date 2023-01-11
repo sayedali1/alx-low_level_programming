@@ -129,6 +129,6 @@ char **strtow(char *str)
 		}
 		strs[i]= _strncpy(strs[i], &str[*p - len] , len);
 	}
-	strs[i] = "\0";
+	strs[i] = '\0';
 	return (strs);
 }
