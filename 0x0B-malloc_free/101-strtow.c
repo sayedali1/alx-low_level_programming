@@ -93,7 +93,7 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p) + word;
+		len = get_len(str, p) + 1;
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * (len));
 
