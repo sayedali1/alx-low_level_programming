@@ -113,9 +113,9 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p) + 1 ;
+		len = get_len(str, p);
 		/* printf("%d ", len);	 */
-		strs[i] = (char *)malloc(sizeof(char) * (len));
+		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
 
 		if (strs[i] == NULL)
 		{
@@ -127,8 +127,8 @@ char **strtow(char *str)
 			free(strs);
 			return(NULL);
 		}
-		strs[i]= _strncpy(strs[i], &str[*p - len  +1] , len);
+		strs[i]= _strncpy(strs[i], &str[*p - len] , len);
 	}
-	strs[i] = '\0';
+	strs[i] = "\0";
 	return (strs);
 }
