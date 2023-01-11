@@ -93,7 +93,7 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p) + 1;
+		len = get_len(str, p);
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * (len));
 
@@ -127,10 +127,10 @@ char **strtow(char *str)
 			k = 0;
 			flag = 0;
 		}
-		/* if (j == _strlen(str))
+		if (j == _strlen(str))
 		{
 			strs[i][k] = '\0';
-		} */
+		}
 	}
 	/* printf ("%d %d\n", i, k); */ 
 	
