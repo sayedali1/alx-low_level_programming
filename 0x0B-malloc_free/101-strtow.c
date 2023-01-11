@@ -34,7 +34,10 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = src[i];
 	}
 
-	dest[i] = '\0';
+	for (; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
 	return (dest);
 }
 
@@ -130,6 +133,5 @@ char **strtow(char *str)
 		}
 		strs[i]= _strncpy(strs[i], &str[*p - len] , len +1);
 	}
-	strs[i]="\0";
 	return (strs);
 }
