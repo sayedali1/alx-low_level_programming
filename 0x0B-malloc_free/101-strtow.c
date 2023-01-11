@@ -87,6 +87,9 @@ char **strtow(char *str)
 	int len = 0, word = 0, i, j;
 	char **strs;
 	int *p;
+	
+	if(_strlen(str) == 1)
+		return (NULL);
 
 	if (str == NULL || *str == '\0')
 	{
