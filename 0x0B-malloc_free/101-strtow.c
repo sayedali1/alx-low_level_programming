@@ -33,11 +33,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[i] = src[i];
 	}
-
-	for (; i < n; i++)
-	{
-		dest[i] = '\0';
-	}
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -117,9 +113,9 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p) ;
-		/* printf("%d ", len);	 */	
-		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
+		len = get_len(str, p) + 1 ;
+		/* printf("%d ", len);	 */
+		strs[i] = (char *)malloc(sizeof(char) * (len));
 
 		if (strs[i] == NULL)
 		{
@@ -131,7 +127,8 @@ char **strtow(char *str)
 			free(strs);
 			return(NULL);
 		}
-		strs[i]= _strncpy(strs[i], &str[*p - len] , len +1);
+		strs[i]= _strncpy(strs[i], &str[*p - len  +1] , len);
 	}
+	strs[i] = '\0';
 	return (strs);
 }
