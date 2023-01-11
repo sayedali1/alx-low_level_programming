@@ -88,7 +88,7 @@ char **strtow(char *str)
 	char **strs;
 	int *p;
 
-	if (str == NULL || *str == '\0'|| _strlen(str) == 1)
+	if (str == NULL || *str == '\0')
 	{
 		/* printf("we in first null \n"); */
 		return (NULL);
