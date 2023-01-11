@@ -93,7 +93,7 @@ char **strtow(char *str)
 	{
 		p = &j;
 
-		len = get_len(str, p) + 1;
+		len = get_len(str, p) + word;
 		/* printf("%d ", len);	 */	
 		strs[i] = (char *)malloc(sizeof(char) * (len));
 
@@ -111,7 +111,7 @@ char **strtow(char *str)
 	 /* walk though str and copy each word in strs */
 	
 	k = 0, i = 0,flag = 0;
-	for (j = 0; j <= _strlen(str); j++)
+	for (j = 0; j <= _strlen(str); ++j)
 	{
 		
 		if (str[j] != ' ' && str[j] != '\0')
