@@ -1,5 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+*_calloc - fun that allocate memory and fill it with zeros
+*@nmemb: num of elements we want to create
+*@size: num of bytes
+*Return: pointer to the allocated memory
+*/
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *memory;
