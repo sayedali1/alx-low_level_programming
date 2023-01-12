@@ -46,11 +46,10 @@ int check_word(char *str)
 {
 	int i = 0, word = 0, flag = 0;
 
-	for (i =0; str[i] !='\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if ((str[i] != ' ' && str[i] != '\0') && flag == 0)
 		{
-	
 			word++;
 			flag = 1;
 		}
@@ -98,7 +97,7 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len = 0, word = 0, i, j = 0;
+	int len = 0, word = 0, i;
 	char **strs;
 	int *p;
 	/* check is the str is empty */
@@ -109,7 +108,6 @@ char **strtow(char *str)
 		return (NULL);
 
 	word = check_word(str);/* get num of words in the str */
-	printf("%d ", word);
 	strs = malloc(sizeof(char *) * (word + 1));/* create memory size of words */
 
 	if (strs == NULL)
@@ -122,7 +120,7 @@ char **strtow(char *str)
 	{
 		p = &j;/* pointer to counter j to hold the index */
 		len = get_len(str, p);/* get the len of each word */
-		
+
 		/* create memory size of len */
 		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
 		if (strs[i] == NULL)
