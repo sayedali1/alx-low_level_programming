@@ -47,8 +47,8 @@ void _strncpy(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
-
-	if (s2 == NULL || sizeof(*s2) == 1)
+	
+	if (s2 == NULL)
 	{
 		s2 = '\0';
 	}	
