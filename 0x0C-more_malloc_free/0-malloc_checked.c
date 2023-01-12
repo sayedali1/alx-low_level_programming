@@ -10,12 +10,12 @@ void *malloc_checked(unsigned int b)
 {
 	unsigned int *memory;
 
-	memory = malloc(sizeof *memory * b);
+	memory = malloc(sizeof(*memory) * b);
 
 	if (memory == NULL)
 	{
 		free(memory);
 		exit(98);
 	}
-	return(memory);
+	return (memory);
 }
