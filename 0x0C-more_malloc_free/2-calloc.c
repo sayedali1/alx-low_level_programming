@@ -20,6 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (memory == NULL)
 	{
+		free(memory);
 		return (NULL);
 	}
 
