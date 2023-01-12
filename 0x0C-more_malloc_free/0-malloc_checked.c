@@ -8,7 +8,7 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *memory;
+	void *memory;
 
 	memory = malloc(sizeof(*memory) * b);
 
@@ -17,5 +17,6 @@ void *malloc_checked(unsigned int b)
 		free(memory);
 		exit(98);
 	}
+
 	return (memory);
 }
