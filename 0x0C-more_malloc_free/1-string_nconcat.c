@@ -53,11 +53,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (s2[i] != ' ')
 			j++; */
 
-	/* if (s2 == NULL)
+	if (s1 == NULL )
+	{
+		s1 = "\0";
+	}
+
+	if (s2 == NULL )
 	{
 		s2 = "\0";
-	}	 */
+	}
+
+	
 	/* check if n greater or equal of s2 */
+
 	if (n >= (unsigned int)_strlen(s2))
 	{
 		n = _strlen(s2); /* if n greater than s2 len let n = s len */
