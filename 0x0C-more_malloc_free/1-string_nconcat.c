@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
+/* #include <stdio.h> */
 /**
  * _strlen - get the len of the string
  * @s: the string
@@ -49,11 +49,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *strcat;
 	int i, j = 0;
 
-	for (i = 0; i < _strlen(s2); i++)
+	/* for (i = 0; i < _strlen(s2); i++)
 		if (s2[i] != ' ')
-			j++;
+			j++; */
 
-	if (s2 == NULL || j == 0)
+	if (s2 == NULL)
 	{
 		s2 = "\0";
 	}	
