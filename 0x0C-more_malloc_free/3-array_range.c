@@ -22,13 +22,13 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	nums = malloc(sizeof(max) * max - min);
-	
+
 	if (nums == NULL)
 	{
 		return (NULL);
 	}
 
-	for ( j = 0, i = min; i <= max; i++, j++)
+	for (j = 0, i = min; i <= max; i++, j++)
 	{
 		nums[j] = i;
 
