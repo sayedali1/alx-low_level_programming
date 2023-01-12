@@ -97,7 +97,7 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len = 0, word = 0, i;
+	int len = 0, word = 0, i, j;
 	char **strs;
 	int *p;
 	/* check is the str is empty */
