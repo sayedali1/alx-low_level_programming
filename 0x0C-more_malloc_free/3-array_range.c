@@ -6,14 +6,14 @@
 *@max: max num
 *Return: pointer to the first element of the created array
 *NULL otherwise
-gi*/
+*/
 
 int *array_range(int min, int max)
 {
 	int *nums;
 	int i, j;
 
-	if (min < 0 || max < 0)
+	if (min < 0 || max < 0 || min == 0 && max == 0)
 	{
 		return (NULL);
 	}
@@ -22,6 +22,11 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 	nums = malloc(sizeof(max) * max - min);
+	
+	if (nums == NULL)
+	{
+		return (NULL);
+	}
 
 	for ( j = 0, i = min; i <= max; i++, j++)
 	{
