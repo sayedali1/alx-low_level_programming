@@ -101,6 +101,7 @@ char **strtow(char *str)
 	char **strs;
 	int *p;
 	/* check is the str is empty */
+	j = 0;
 	for (i = 0; i < _strlen(str); i++)
 		if (str[i] != ' ')
 			j++;
