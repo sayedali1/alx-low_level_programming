@@ -47,12 +47,7 @@ void _strncpy(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
-	/* int i, j = 0; */
-
-	/* for (i = 0; i < _strlen(s2); i++)
-		if (s2[i] != ' ')
-			j++; */
-
+	
 	if (s1 == NULL )
 	{
 		s1 = "";
@@ -71,13 +66,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else if (n >= (unsigned int)_strlen(s2))
 	{
 		n = _strlen(s2); /* if n greater than s2 len let n = s len */
-		strcat = malloc(sizeof(*strcat) * _strlen(s1) * n);
+	}
 
-	}
-	else
-	{
-		strcat = malloc(sizeof(*strcat) * _strlen(s1) * n);
-	}
+	strcat = malloc(sizeof(*strcat) * (_strlen(s1) + n + 1));
 
 	if (strcat == NULL)
 	{
