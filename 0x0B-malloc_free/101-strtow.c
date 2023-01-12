@@ -1,23 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-/**
-* _strlen - get the len of the string
-* @s: the string
-* Return: the len
-*/
-int _strlen(char *s)
-{
-	int lenth = 0;
 
-	while (*s != '\0')
-	{
-		lenth++;
-		s++;
-	}
-
-	return (lenth);
-}
 /**
 *_strncpy - cpy string to another
 *@dest: first str
@@ -46,18 +30,17 @@ int check_word(char *str)
 {
 	int i = 0, word = 0, flag = 0;
 
-	while (i <= _strlen(str))
+	for (i =0; str[i] !='\0'; i++)
 	{
-		if ((str[i] != ' ' && str[i] != '\0') && flag == 0)
+		if (str[i] != ' ' && flag == 0)
 		{
 			word++;
 			flag = 1;
 		}
-		else if (str[i] == ' ' || i == _strlen(str) - 1)
+		else if (str[i] == ' ' )
 		{
 			flag = 0;
 		}
-		i++;
 	}
 	return (word);
 }
@@ -72,21 +55,18 @@ int get_len(char *str, int *i)
 {
 	int len = 0, flag = 0;
 
-	while (*i <= _strlen(str))
+	for (;str[*i] != '\0'; *i += 1)
 	{
-		if ((str[*i] != ' ' && str[*i] != '\0'))
+		if (str[*i] != ' ' )
 		{
 			len++;
 			flag = 1;
 		}
-		else if ((str[*i] == ' ' || str[*i] == '\0' ||
-		 *i == (_strlen(str) - 1)) && flag == 1)
+		else if (str[*i] == ' ' && flag == 1)
 		{
-			/* printf("%d %d\n", len, i); */
 			return (len);
 			flag = 0;
 		}
-		*i += 1;
 	}
 	return (0);
 }
@@ -102,13 +82,14 @@ char **strtow(char *str)
 	char **strs;
 	int *p;
 	/* check is the str is empty */
-	for (i = 0; i < _strlen(str); i++)
+	for (i = 0; str[i] != '\0'; i++)
 		if (str[i] != ' ')
 			j++;
 	if (str == NULL || *str == '\0' || j == 0)
 		return (NULL);
 
 	word = check_word(str);/* get num of words in the str */
+	printf("%d ", word);
 	strs = malloc(sizeof(char *) * (word + 1));/* create memory size of words */
 
 	if (strs == NULL)
@@ -121,6 +102,7 @@ char **strtow(char *str)
 	{
 		p = &j;/* pointer to counter j to hold the index */
 		len = get_len(str, p);/* get the len of each word */
+		
 		/* create memory size of len */
 		strs[i] = (char *)malloc(sizeof(char) * (len + 1));
 		if (strs[i] == NULL)
