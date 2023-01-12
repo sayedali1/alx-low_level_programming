@@ -47,7 +47,7 @@ void _strncpy(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
-	int i, j = 0;
+	/* int i, j = 0; */
 
 	/* for (i = 0; i < _strlen(s2); i++)
 		if (s2[i] != ' ')
