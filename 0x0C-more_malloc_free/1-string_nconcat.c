@@ -37,7 +37,7 @@ void _strncpy(char *dest, char *src, int n)
 	dest[i] = '\0';
 }
 /**
-*string_nconat - fun that concatenates two strs with varibale
+*string_nconcat - fun that concatenates two strs with varibale
 *ofthe size of the sec str
 *@s1: pointer to the first str
 *@s2: pointer to the sec str
@@ -48,20 +48,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
 	/* check if n greater or equal of s2 */
-	if(n >= (unsigned int)_strlen(s2))
+	if(n >= (unsigned int) _strlen(s2))
 	{
 		n = _strlen(s2); /* if n greater than s2 len let n = s len */
-		strcat = malloc(sizeof *strcat * _strlen(s1) * n);
-		
+		strcat = malloc(sizeof(*strcat) * _strlen(s1) * n);
+
 	}
 	else
 	{
-		strcat = malloc(sizeof *strcat * _strlen(s1) * n);
+		strcat = malloc(sizeof(*strcat *) _strlen(s1) * n);
 	}
 
-	if(strcat == NULL)
+	if (strcat == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	/* cpy s1 into strcat */
