@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
-	for (i = 0; i < n ; i++)
+	for (i = 0;i < n ; i++)
 	{
 		dest[i] = src[i];
 	}
@@ -37,7 +37,7 @@ int check_word(char *str)
 			word++;
 			flag = 1;
 		}
-		else if (str[i] == ' ' )
+		else if (str[i] == ' ')
 		{
 			flag = 0;
 		}
@@ -78,7 +78,7 @@ int get_len(char *str, int *i)
 */
 char **strtow(char *str)
 {
-	int len = 0, word = 0, i, j = 0;
+	int len = 0, word = 0, i, j;
 	char **strs;
 	int *p;
 	/* check is the str is empty */
