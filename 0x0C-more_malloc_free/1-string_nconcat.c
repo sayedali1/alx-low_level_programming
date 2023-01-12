@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-/* #include <stdio.h> */
+
 /**
  * _strlen - get the len of the string
  * @s: the string
@@ -47,15 +47,15 @@ void _strncpy(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
-	
-	if (s1 == NULL )
+
+	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = "\0";
 	}
 
-	if (s2 == NULL )
+	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = "\0";
 	}
 
 	/* check if n greater or equal of s2 */
