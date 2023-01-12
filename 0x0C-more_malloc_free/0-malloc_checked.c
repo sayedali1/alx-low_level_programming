@@ -8,15 +8,14 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *memory;
+	unsigned int *memory;
 
-	memory = malloc(sizeof(*memory) * b);
+	memory = malloc(b);
 
 	if (memory == NULL)
 	{
 		free(memory);
 		exit(98);
 	}
-
 	return (memory);
 }
