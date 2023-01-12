@@ -47,6 +47,11 @@ void _strncpy(char *dest, char *src, int n)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
+
+	if (s2 == NULL || sizeof(*s2) == 1)
+	{
+		s2 = '\0';
+	}	
 	/* check if n greater or equal of s2 */
 	if (n >= (unsigned int)_strlen(s2))
 	{
