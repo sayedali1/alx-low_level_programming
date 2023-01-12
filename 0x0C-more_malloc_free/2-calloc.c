@@ -2,25 +2,25 @@
 #include <stdlib.h>
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    int *memory;
-    unsigned int i;
+	int *memory;
+	unsigned int i;
 
-    if (nmemb == 0 || size == 0)
-    {
-        return (NULL);
-    }
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
 
-    memory = malloc(size * nmemb);
-    
-    if (memory == NULL)
-    {
-        return (NULL);
-    }
+	memory = malloc(size * nmemb);
+	
+	if (memory == NULL)
+	{
+		return (NULL);
+	}
 
-    for (i = 0; i < nmemb; i++)
-    {
-        memory[i] = 0;
-    }
+	for (i = 0; i < nmemb; i++)
+	{
+		memory[i] = 0;
+	}
 
-    return (memory);
+	return (memory);
 }
