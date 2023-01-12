@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strcat;
 	/* check if n greater or equal of s2 */
-	if(n >= (unsigned int) _strlen(s2))
+	if (n >= (unsigned int)_strlen(s2))
 	{
 		n = _strlen(s2); /* if n greater than s2 len let n = s len */
 		strcat = malloc(sizeof(*strcat) * _strlen(s1) * n);
