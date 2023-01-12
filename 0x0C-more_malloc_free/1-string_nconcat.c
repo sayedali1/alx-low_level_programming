@@ -63,10 +63,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "\0";
 	}
 
-	
 	/* check if n greater or equal of s2 */
-
-	if (n >= (unsigned int)_strlen(s2))
+	if ((int)n < 0)
+	{
+		return (NULL);
+	}
+	else if (n >= (unsigned int)_strlen(s2))
 	{
 		n = _strlen(s2); /* if n greater than s2 len let n = s len */
 		strcat = malloc(sizeof(*strcat) * _strlen(s1) * n);
@@ -79,6 +81,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (strcat == NULL)
 	{
+		free(strcat);
 		return (NULL);
 	}
 
