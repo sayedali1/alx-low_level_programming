@@ -13,10 +13,6 @@ int *array_range(int min, int max)
 	int *nums;
 	int i, n;
 
-	if (min < 0 || max < 0)
-	{
-		return (NULL);
-	}
 	if (min > max)
 	{
 		return (NULL);
