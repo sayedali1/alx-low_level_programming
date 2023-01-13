@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-*_realoc - fun that do the same as realloc fun
+*_realloc - fun that do the same as realloc fun
 *@ptr: pointer the the existing memory
 *@old_size: size of the old memory
 *@new_size: size of the new memory we want
