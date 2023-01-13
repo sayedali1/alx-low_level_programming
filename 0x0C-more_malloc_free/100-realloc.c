@@ -19,7 +19,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	/** 
+	/**
 	*alloc memoey of the new size if ptr point to nothing
 	* and return the new memoey empty
 	*/
