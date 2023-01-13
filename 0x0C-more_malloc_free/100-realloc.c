@@ -26,34 +26,22 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		newPtr = malloc(new_size);
 		return (newPtr);
 	}
-
 	/* check the size to alloc memory  */
 	newPtr = malloc(new_size);
 
 	if (newPtr == NULL)
-	{
-		free(newPtr);
 		return (NULL);
-	}
 
 	if (new_size > old_size)
-	{
 		for (i = 0; i < old_size; i++)
-		{
-			newPtr[i] = *((char *)ptr +i);
-		}
-	}
+			newPtr[i] = *((char *)ptr + i);
+
 	else if (new_size < old_size)
-	{
 		for (i = 0; i < new_size; i++)
-		{
-			newPtr[i] = *((char *)ptr +i);
-		}
-	}
+			newPtr[i] = *((char *)ptr + i);
 	else
-	{
 		return (ptr);
-	}
+
 	free(ptr);
 	return (newPtr);
 }
