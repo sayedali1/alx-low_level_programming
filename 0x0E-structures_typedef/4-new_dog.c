@@ -19,6 +19,25 @@ int _strlen(char *s)
 
 	return (lenth);
 }
+
+/**
+*_strcpy - copy the sec str in the first one
+*@dest: the copied str
+*@src: the str we want to copy
+*Return: char the address of dest
+*/
+
+char *_strcpy(char *dest, char *src)
+{
+	int i, len = _strlen(src);
+
+	for (i = 0; i <= len; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	return (dest);
+}
 /**
 *new_dog - fun that create a new dog
 *@name:pointer to the name of the dog
@@ -31,7 +50,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *New_dog;
 	char *name_cp, *owner_cp;
-	int i;
 
 	New_dog = malloc(sizeof(dog_t));
 
@@ -46,14 +64,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(name_cp);
 			return (NULL);
 		}
-		
-		for (i = 0; name[i] != '\0'; i++)
-		{
-			name_cp[i] = name[i];
-		}
-		name_cp[i] ='\0';
+		New_dog->name = _strcpy(name_cp,name);
 	}
-	New_dog->name = name_cp;
+	else
+		New_dog = NULL ;
 
 	if (owner != NULL)
 	{
@@ -65,16 +79,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(New_dog);
 			return (NULL);
 		}
-
-		for (i = 0; owner[i] != '\0'; i++)
-		{
-			owner_cp[i] = owner[i];
-		}
-		owner_cp[i] ='\0';
+		New_dog->owner = _strcpy(owner_cp, owner);
 	}
-	New_dog->name = owner_cp;
+	else
+		New_dog->owner = NULL;
 
-	
 	New_dog->age = age;
 	
 	return (New_dog);
