@@ -3,8 +3,8 @@
 *main - fun that print the file name
 *Return: 0
 */
-int main (void)
+int main(void)
 {
-    printf("%s", __FILE__);
-    return (0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
