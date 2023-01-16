@@ -52,13 +52,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *name_cp;
 	char *owner_cp;
 
-	New_dog = malloc(sizeof(dog_t));
+	New_dog = malloc(sizeof(dog_t));/* allocate memory of size dog_t */
 
 	if (New_dog == NULL)
 		return (NULL);
 
 	if (name != NULL)
 	{
+		/* alloc memory of size name and cpy name into name_cp */
 		name_cp = malloc(sizeof(char) * _strlen(name) + 1);
 		if (name_cp == NULL)
 		{
@@ -72,6 +73,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (owner != NULL)
 	{
+		/* alloc memory of size owner and cpy owner into owner_cp */
 		owner_cp = malloc(sizeof(char) * _strlen(owner) + 1);
 
 		if (owner_cp == NULL)
