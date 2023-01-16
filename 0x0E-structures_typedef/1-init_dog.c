@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "dog.h"
 /**
 *init_dog - fun that init a varible of type dog
@@ -8,8 +9,8 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (dog == NULL)
-		return (1);
+	if (d == NULL)
+		return;
 
 	d->name = name;
 	d->age = age;
