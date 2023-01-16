@@ -43,7 +43,7 @@ char *_strcpy(char *dest, char *src)
 *@name:pointer to the name of the dog
 *@age: dog age
 *@owner: pointer to the name of the owner
-*Retuen: pointer to the created struct
+*Return: pointer to the created struct
 */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -64,10 +64,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(name_cp);
 			return (NULL);
 		}
-		New_dog->name = _strcpy(name_cp,name);
+		New_dog->name = _strcpy(name_cp, name);
 	}
 	else
-		New_dog = NULL ;
+		New_dog = NULL;
 
 	if (owner != NULL)
 	{
@@ -85,6 +85,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		New_dog->owner = NULL;
 
 	New_dog->age = age;
-	
+
 	return (New_dog);
 }
