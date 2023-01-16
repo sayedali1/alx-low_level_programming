@@ -49,7 +49,7 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *New_dog;
-	char *name_cp,
+	char *name_cp;
 	char *owner_cp;
 
 	New_dog = malloc(sizeof(dog_t));
