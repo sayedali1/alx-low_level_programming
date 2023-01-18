@@ -32,7 +32,7 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(100);
 	}
-	
+
 	printf("%d\n", get_fun(atoi(av[1]), atoi(av[3])));
 
 	return (0);
