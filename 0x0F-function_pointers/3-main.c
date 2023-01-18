@@ -9,7 +9,7 @@
 *Return: 0
 */
 
-int main (int ac , char **av)
+int main(int ac, char **av)
 {
 	int (*get_fun)(int, int);
 
@@ -25,7 +25,7 @@ int main (int ac , char **av)
 		exit(99);
 	}
 
-	if ((av[2][0] == '/' || av[2][0] == '%' ) && atoi(av[3]) == 0)
+	if ((av[2][0] == '/' || av[2][0] == '%') && atoi(av[3]) == 0)
 	{
 		printf("Error");
 		exit(100);
