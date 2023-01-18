@@ -5,6 +5,7 @@
 *@array: pointer to the first elem in the array
 *@size: size of the array
 *@cmp: pointer to fun
+*Return: the index of the first element, -1 otherwise
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
