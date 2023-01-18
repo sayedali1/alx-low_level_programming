@@ -21,7 +21,7 @@ int main(int ac, char **av)
 
 	get_fun = get_op_func(av[2]);
 
-	if (av[2][0] == '\0' || get_fun == NULL)
+	if (av[2][1] != '\0' || get_fun == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -32,7 +32,6 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(100);
 	}
-
 	
 	printf("%d\n", get_fun(atoi(av[1]), atoi(av[3])));
 
