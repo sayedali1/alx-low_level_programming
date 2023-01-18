@@ -13,7 +13,7 @@ int main(int ac, char **av)
 {
 	int (*get_fun)(int, int);
 
-	if (ac <= 1)
+	if (ac != 4)
 	{
 		printf("Error\n");
 		exit(98);
