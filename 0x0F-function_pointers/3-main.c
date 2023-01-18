@@ -27,7 +27,7 @@ int main(int ac, char **av)
 
 	if ((av[2][0] == '/' || av[2][0] == '%') && atoi(av[3]) == 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(100);
 	}
 
