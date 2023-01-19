@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
-*sum_them_all: fun that sum all the arg tha passes to it
+*sum_them_all - fun that sum all the arg tha passes to it
 *@n: num of arguments that gonna pass to the fun
 *Return: sum of the args, 0 otherwise
 */
@@ -13,7 +13,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	if (n == 0)
 	{
-		return (0);	
+		return (0);
 	}
 
 	va_start(ap, n);
