@@ -52,7 +52,7 @@ void print_str(va_list pa)
 */
 void print_all(const char * const format, ...)
 {
-	arg_t type[] ={
+	arg_t type[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 
 	va_start(pa, format);
 	i = 0;
-	while(format != NULL && format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
 		while (type[j].sym != '\0')
