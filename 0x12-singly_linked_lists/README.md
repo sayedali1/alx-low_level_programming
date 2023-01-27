@@ -42,3 +42,7 @@
 | [4](/0x12-singly_linked_lists/4-free_list.c) | Write a function that frees a `list_t` list. |
 | [5](/0x12-singly_linked_lists/100-first.c) | Write a function that prints `You're beat! and yet, you must allow,\nI bore my house upon my back!\n` before the `main` function is executed. |
 | [6](/0x12-singly_linked_lists/101-hello_holberton.asm) | Write a 64-bit program in assembly that prints `Hello, Holberton`, followed by a new line. |
+
+## Author
+
+* [sayed ali](https://github.com/sayedali1)
