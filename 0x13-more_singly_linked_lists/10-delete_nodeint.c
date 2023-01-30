@@ -28,7 +28,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		temp = temp->next;
 	}
 
-	if (temp->next == NULL)
+	if (i != (index - 1) || temp->next == NULL)
 		return (-1);
 	/* make the prvious node points to the next one after delete */
 	temp2 = temp->next;
