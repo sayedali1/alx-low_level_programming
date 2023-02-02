@@ -33,7 +33,7 @@ void print_binary(unsigned long int n)
 		if (n & digit)/* bitwise the mostsign bit */
 			_putchar('1');
 		else
-			putchar('0');
+			_putchar('0');
 
 		digit >>= 1;
 	}
