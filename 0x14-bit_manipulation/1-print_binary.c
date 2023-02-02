@@ -1,37 +1,40 @@
 #include "main.h"
 /**
+ * binary_len- fun thet cal now many digit is needed to call the bi num
+ * @n: the num we want to calc
+ * Return: the len
+ */
+int binary_len(unsigned long int n)
+{
+	int len = 0;
+
+	while (n > 0)
+	{
+		len++;
+		n >>= 1;
+	}
+	len--;
+	return (len);
+}
+
+/**
  * print_binary - fun that convert decimal to binary
  * @n:num we want to convert
  */
 void print_binary(unsigned long int n)
 {
-	int i, flag = 0;
-	unsigned long int  decimal = 1024, num = 0;
+	unsigned long int digit = 1;
 
-	if (n == 0)
+	if (binary_len(n) > 0)/* shift the 1 to the left */
+		digit <<= binary_len(n);
+
+	while (digit > 0)
 	{
-		_putchar('0');
-		return;
-	}
-	/* walk through 1024 */
-	if (n > 0)
-	{
-		for (i = 0; i < 11; i++)
-		{
-			/* check if num plus the decimal less than the num */
-			if (n >= (num + decimal))
-			{
-				_putchar('1');/* print 1 */
-				num += decimal; /* add decimal to num */
-				decimal >>= 1; /* devide the decimal by 2 */
-				flag = 1; /* use it to dont print 0 on the left */
-			}
-			else if (n < (num + decimal))
-			{
-				if (flag == 1)
-					_putchar('0'); /* print 0 only if 1 printed before it */
-				decimal >>= 1; /* devide decimal by 2 */
-			}
-		}
+		if (n & digit)/* bitwise the mostsign bit */
+			_putchar('1');
+		else
+			putchar('0');
+
+		digit >>= 1;
 	}
 }
