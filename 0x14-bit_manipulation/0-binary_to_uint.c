@@ -45,7 +45,7 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 	unsigned int sum = 0;
 
-	if (b == NULL)
+	if (b == 0)
 		return (0);
 
 	/* walk though the string form left to right */
