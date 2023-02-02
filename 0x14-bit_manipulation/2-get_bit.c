@@ -1,22 +1,5 @@
 #include "main.h"
 /**
- * binary_len- fun thet cal now many digit is needed to call the bi num
- * @n: the num we want to calc
- * Return: the len
- */
-unsigned int binary_len(unsigned long int n)
-{
-	int len = 0;
-
-	while (n > 0)
-	{
-		len++;
-		n >>= 1;
-	}
-	len--;
-	return (len);
-}
-/**
  * get_bit -  returns the value of a bit at a given index
  * @n: the num we want to get the bit for
  * @index: the index of the bit we want
@@ -26,7 +9,8 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int mask = 1;
 
-	if (!(index < binary_len(n)))
+	/* check if index not more the the max bit size */
+	if (index > (sizeof(unsigned long int) * 8))
 		return (-1);
 
 	mask <<= index;/* shift to the left to the given index */
