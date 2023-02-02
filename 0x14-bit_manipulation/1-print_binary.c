@@ -8,6 +8,9 @@ void print_binary(unsigned long int n)
 	int i, flag = 0;
 	unsigned long int  decimal = 1024, num = 0;
 
+	if (n < 0)
+		return;
+
 	if (n == 0)
 	{
 		_putchar('0');
