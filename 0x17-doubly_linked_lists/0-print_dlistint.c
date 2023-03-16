@@ -8,7 +8,8 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	const dlistint_t *temp = h;
 	int i;
-	if (h = NULL)
+
+	if (h == NULL)
 		return (0);
 
 	for (i = 0; temp; i++)
