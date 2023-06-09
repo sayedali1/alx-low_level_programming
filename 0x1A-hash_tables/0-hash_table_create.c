@@ -8,17 +8,18 @@ hash_table_t *hash_table_create(unsigned long int size)
 
     if (size == 0)
         return (NULL);
-
+    /* allocate table */
     table = malloc(sizeof(hash_node_t));
     if (table == NULL)
         return (NULL);
+    /* allocate arrray of given size */
     array = malloc(sizeof(array) * size);
     if(array == NULL)
         return (NULL);
-
+    /* make each element in the array NULL */
     for (i = 0; i < size; i++)
        array[i] = NULL;
-
+    /* fill the table */
     table->size = size;
     table->array = array;
     return (table);
