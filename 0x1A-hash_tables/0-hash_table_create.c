@@ -19,7 +19,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	/* allocate arrray of given size */
 	array = malloc(sizeof(array) * size);
 	if (array == NULL)
+	{
 		return (NULL);
+		free(table)
+	}
 	/* make each element in the array NULL */
 	for (i = 0; i < size; i++)
 		array[i] = NULL;
