@@ -21,7 +21,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (array == NULL)
 	{
 		return (NULL);
-		free(table)
+		free(table);
 	}
 	/* make each element in the array NULL */
 	for (i = 0; i < size; i++)
