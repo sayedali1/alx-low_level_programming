@@ -25,7 +25,7 @@ int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
 		return (0);
 	}
 
-	_value= strdup(value);
+	_value = strdup(value);
 	if (!_value)
 	{
 		free(_key);
