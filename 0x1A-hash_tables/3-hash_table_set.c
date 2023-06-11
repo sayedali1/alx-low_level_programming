@@ -1,33 +1,40 @@
 #include "hash_tables.h"
-
+/**
+ * create_and_add_node - malloc, set values, and insert node into hash table
+ * @ht: hash table
+ * @key: key; can't be empty string
+ * @value: value
+ * @idx: index to insert in at hash table
+ * Return: 1 if success, 0 if fail
+ */
 int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
 			unsigned long int idx)
 {
 	hash_node_t *node = NULL;
-	char *k;
-	char *v;
+	char *_key;
+	char *_value;
 
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 		return (0);
 
-	k = strdup(key);
-	if (!k)
+	_key = strdup(key);
+	if (!_key)
 	{
 		free(node);
 		return (0);
 	}
 
-	v = strdup(value);
-	if (!v)
+	_value= strdup(value);
+	if (!_value)
 	{
-		free(k);
+		free(_key;
 		free(node);
 		return (0);
 	}
 
-	node->key = k;
-	node->value = v;
+	node->key = _key;
+	node->value = _value;
 
 	if ((ht->array)[idx] == NULL)
 		node->next = NULL;
