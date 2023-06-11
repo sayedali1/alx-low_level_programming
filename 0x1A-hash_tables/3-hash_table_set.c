@@ -1,29 +1,3 @@
-#include "hash_tables.h"
-
-/**
- * hash_table_set - fun to add key in the hash
- * @ht: pointer to the hash table
- * @key: str we wanna add to the tale
- * @value: value we wanna add to the key
- * Return: 1 if sucess, 0 otherwise
- */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
-	int index;
-	hash_node_t *node = NULL;
-
-	if (key == NULL)
-		return (0);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	node = (ht->array)[index];
-	while (node && strcmp(key, node->key) != 0)
-		node = node->next;
-	if (node != NULL)
-		node->value = strdup(value);
-
-	return (create_and_add_node(ht, key, value, index));
-}
 int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
 			unsigned long int idx)
 {
