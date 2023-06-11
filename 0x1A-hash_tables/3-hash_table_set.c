@@ -1,3 +1,5 @@
+#include "hash_tables.h"
+
 int create_and_add_node(hash_table_t *ht, const char *key, const char *value,
 			unsigned long int idx)
 {
