@@ -14,10 +14,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	key_idx = key_index((const unsigned char *)key, ht->size);
 	node = (ht->array)[key_idx];
-	/* printf("value = %s\n", node->key); */
+
 	if (node != NULL && strcmp(key, node->key) != 0)
 		node = node->next;
-		return (NULL);
+
 	if (!node)
 		return (NULL);
 	else
