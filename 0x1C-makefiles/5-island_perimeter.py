@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+""" 
+Modul: island_perimeter
+Return the perimeter of a given matrix
+"""
+
 
 def island_perimeter(grid):
     """ fun that calc the perimeter of a given matrix """
